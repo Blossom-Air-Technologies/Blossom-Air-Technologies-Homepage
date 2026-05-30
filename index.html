@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blossom Air Technologies | Edge Systems Architecture</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+        
+        :root {
+            --apple-blue: #0071e3;
+            --card-bg: rgba(22, 22, 23, 0.75);
+            --glass-border: rgba(255, 255, 255, 0.12);
+        }
+
+        body {
+            background-color: #000;
+            color: #f5f5f7;
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ============================================================= */
+        /* ORGANIC GRADIENT CLOUD ENGINE (Vibrant Deep Spectrum Contrast) */
+        /* ============================================================= */
+        @keyframes floatAndMorph {
+            0% {
+                transform: translate(0px, 0px) rotate(0deg) scale(1);
+                border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+            }
+            33% {
+                transform: translate(40px, -60px) rotate(120deg) scale(1.15);
+                border-radius: 70% 30% 52% 48% / 60% 40% 60% 40%;
+            }
+            66% {
+                transform: translate(-40px, 30px) rotate(240deg) scale(0.9);
+                border-radius: 28% 72% 35% 65% / 35% 65% 35% 65%;
+            }
+            100% {
+                transform: translate(0px, 0px) rotate(360deg) scale(1);
+                border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+            }
+        }
+
+        .animated-squiggle-1 {
+            animation: floatAndMorph 20s ease-in-out infinite;
+        }
+        .animated-squiggle-2 {
+            animation: floatAndMorph 28s ease-in-out infinite reverse;
+        }
+
+        .glass-nav {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(180deg, #ffffff 30%, #d1d5db 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .quote-gradient {
+            background: linear-gradient(135deg, #ffffff 10%, #9ca3af 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bento-card {
+            background: var(--card-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 32px;
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+        }
+
+        .bento-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
+            background: rgba(30, 30, 32, 0.85);
+        }
+
+        .project-display {
+            background: rgba(18, 18, 20, 0.55);
+            border: 1px solid var(--glass-border);
+            border-radius: 38px;
+            backdrop-filter: blur(28px);
+            -webkit-backdrop-filter: blur(28px);
+        }
+
+        .glassmorphism-data-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2), 0 20px 40px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(32px);
+            -webkit-backdrop-filter: blur(32px);
+        }
+
+        .contact-glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .contact-glass-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(0, 113, 227, 0.6);
+            transform: translateY(-3px);
+        }
+
+        .apple-button {
+            background: var(--apple-blue);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 980px;
+            font-weight: 500;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .apple-button:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 24px rgba(0, 113, 227, 0.5);
+        }
+
+        #mobile-menu-overlay {
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        #mobile-menu-overlay.menu-open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .mode-active {
+            opacity: 1 !important;
+        }
+        .mode-active h3 {
+            font-style: italic;
+            transform: translateX(12px);
+            color: #38bdf8 !important; /* Sky blue contrast accent */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed top-0 w-full z-50 glass-nav">
+        <div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
+            
+            <a href="#" class="flex items-center gap-3 group focus:outline-none" aria-label="Blossom Air Technologies Home">
+                <svg class="w-7 h-7 sm:w-8 sm:h-8 drop-shadow-[0_2px_10px_rgba(123,97,255,0.15)]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M42 16L12 34C10.6667 34.7698 10.6667 36.6942 12 37.4641L42 55.4641C43.3333 56.2339 45 55.2717 45 53.7321V17.7321C45 16.1925 43.3333 15.2302 42 16Z" fill="#FF6D00"/>
+                    <rect x="55" y="16" width="34" height="34" rx="9" fill="#00BCD4"/>
+                    <circle cx="29" cy="71" r="17" fill="#00C853"/>
+                    <path d="M72 54L87.5885 63V81L72 90L56.4115 81V63L72 54Z" fill="#7B61FF"/>
+                </svg>
+                
+                <div class="flex flex-col justify-center select-none">
+                    <span class="text-[12px] sm:text-sm font-bold tracking-[0.2em] uppercase font-sans text-white group-hover:text-zinc-300 transition-colors duration-200 leading-none">
+                        Blossom Air technologies
+                    </span>
+                </div>
+            </a>
+            
+            <div class="hidden md:flex space-x-10 text-[13px] font-semibold text-zinc-300">
+                <a href="#abstract" class="hover:text-white transition">Abstract</a>
+                <a href="#manifesto" class="hover:text-white transition">Manifesto</a>
+                <a href="#metrics" class="hover:text-white transition">Metrics</a>
+                <a href="#pillars" class="hover:text-white transition">Pillars</a>
+                <a href="#sprint" class="hover:text-white transition text-orange-400">Operational Sprint</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="#contact" class="hidden sm:inline-block text-[11px] uppercase tracking-wider bg-white text-black px-5 py-1.5 rounded-full font-bold hover:bg-gray-200 transition">Initialize Port</a>
+                <button id="hamburger-btn" class="md:hidden text-zinc-100 hover:text-white text-xl p-2 focus:outline-none" aria-label="Toggle Navigation Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="mobile-menu-overlay" class="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl flex flex-col justify-center items-center">
+        <button id="close-menu-btn" class="absolute top-4 right-6 text-zinc-300 hover:text-white text-2xl p-2" aria-label="Close Menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="flex flex-col space-y-8 text-center text-xl font-semibold tracking-wide">
+            <a href="#abstract" class="text-zinc-300 hover:text-white transition mobile-link">Abstract</a>
+            <a href="#manifesto" class="text-zinc-300 hover:text-white transition mobile-link">Manifesto</a>
+            <a href="#metrics" class="text-zinc-300 hover:text-white transition mobile-link">Metrics</a>
+            <a href="#pillars" class="text-zinc-300 hover:text-white transition mobile-link">Pillars</a>
+            <a href="#sprint" class="text-orange-400 hover:text-orange-300 transition mobile-link">Operational Sprint</a>
+            <a href="#contact" class="bg-white text-black text-sm uppercase tracking-wider px-8 py-3 rounded-full font-bold hover:bg-gray-200 transition mobile-link inline-block">Initialize Port</a>
+        </div>
+    </div>
+
+    <section class="min-h-screen flex flex-col items-center justify-center text-center px-6 relative overflow-hidden">
+        <div class="absolute inset-0 z-0 pointer-events-none flex items-center justify-center">
+            <div class="relative w-full h-full max-w-7xl filter blur-[130px] opacity-45">
+                <div class="animated-squiggle-1 absolute top-[20%] left-[15%] w-[520px] h-[520px] bg-gradient-to-tr from-blue-600 via-indigo-600 to-blue-700 mix-blend-screen"></div>
+                <div class="animated-squiggle-2 absolute bottom-[20%] right-[10%] w-[560px] h-[560px] bg-gradient-to-br from-orange-500 via-amber-500 to-orange-600 mix-blend-screen"></div>
+            </div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <div class="animate__animated animate__fadeInDown text-sky-400 font-extrabold tracking-[0.35em] uppercase text-[10px] mb-8">
+                BLOSSOM AIR TECHNOLOGIES • System Automation
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold hero-gradient tracking-tighter mb-8 animate__animated animate__fadeIn leading-[1.1]">
+                Architectural Precision.<br>Distributed Control.
+            </h1>
+            <p id="abstract" class="max-w-3xl mx-auto text-lg md:text-xl text-zinc-100 font-normal leading-relaxed animate__animated animate__fadeInUp mb-10">
+                We design lightweight, high-integrity communication architectures engineered to process critical events at the absolute edge of the network. By executing directly at the physical boundary, we eliminate network propagation delays, secure local data paths, and guarantee continuous system state validation.
+            </p>
+            <div class="animate__animated animate__fadeInUp flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#manifesto" class="apple-button text-sm px-6 py-3">Explore Framework</a>
+                <a href="#sprint" class="bg-zinc-900/90 border border-zinc-700 hover:bg-zinc-800 text-zinc-100 font-medium px-7 py-3 rounded-full transition-all text-sm backdrop-blur-md">View Tracks</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="manifesto" class="max-w-6xl mx-auto px-6 py-24 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <div class="md:col-span-8 bento-card p-12 flex flex-col justify-end min-h-[440px] overflow-hidden">
+                <div class="text-sky-400 text-[10px] uppercase tracking-widest font-bold mb-4">Section 02 // Core Manifesto</div>
+                <h3 class="text-4xl font-bold mb-4 text-white tracking-tight">Radical Efficiency. Built for Autonomy.</h3>
+                <p class="text-zinc-200 text-base md:text-lg leading-relaxed mb-4">
+                    Traditional software engineering models lean heavily on centralized, multi-layered cloud frameworks. This dependency introduces a single point of architectural failure, continuous overhead, and unpredictable latency variables. We believe that true operational reliability requires complete hardware independence.
+                </p>
+                <p class="text-zinc-200 text-base md:text-lg leading-relaxed">
+                    We design low-overhead, bare-metal logic layers and decentralized backend routing structures that empower localized computing nodes to execute complex commands autonomously with zero third-party dependencies.
+                </p>
+            </div>
+
+            <div id="metrics" class="md:col-span-4 grid grid-rows-3 gap-4">
+                <div class="bento-card p-6 flex flex-col justify-center items-center text-center">
+                    <div class="text-3xl font-bold text-white tracking-tighter font-mono">[0.00s]</div>
+                    <p class="text-zinc-300 text-[11px] uppercase tracking-wider mt-1">Target Latency</p>
+                </div>
+                <div class="bento-card p-6 flex flex-col justify-center items-center text-center">
+                    <div class="text-3xl font-bold text-sky-400 tracking-tighter font-mono">[100%]</div>
+                    <p class="text-zinc-300 text-[11px] uppercase tracking-wider mt-1">Edge Autonomy</p>
+                </div>
+                <div class="bento-card p-6 flex flex-col justify-center items-center text-center">
+                    <div class="text-3xl font-bold text-zinc-100 tracking-tighter font-mono">[Zero]</div>
+                    <p class="text-zinc-300 text-[11px] uppercase tracking-wider mt-1">Cloud Dependencies</p>
+                </div>
+            </div>
+
+            <div id="pillars" class="md:col-span-5 bento-card p-10">
+                <h3 class="text-xl font-bold mb-8 text-orange-400 tracking-tight">Governance & Core Pillars</h3>
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-2">01 / Decoupled Framework Integrity</h4>
+                        <p class="text-xs text-zinc-200 leading-relaxed">We build compiling routines that execute directly on hardware boundaries, maximizing execution speed and eliminating abstract bottleneck layers.</p>
+                    </div>
+                    <div class="border-t border-white/10 pt-4">
+                        <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-2">02 / Deterministic Alert Logic</h4>
+                        <p class="text-xs text-zinc-200 leading-relaxed">Localizing data routing, payload encryption, and trigger states to the edge node to preserve communication pathways during network degradation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-7 bento-card p-12 flex items-center">
+                <div class="flex-1">
+                    <div class="text-zinc-400 text-[10px] uppercase tracking-widest font-mono mb-2">Architectural Standard</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">The Boundary Philosophy</h3>
+                    <p class="text-zinc-200 leading-relaxed text-sm md:text-base">
+                        If a system requires external internet access or cloud handshakes to make a critical alert decision, it isn't truly autonomous. We build systems that command their own environment.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-48 bg-black border-y border-white/5 text-center px-6 relative z-10">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-6xl font-bold tracking-tighter leading-[1.1] quote-gradient">
+                "If a system relies on external networks to make critical decisions, it isn't truly autonomous."
+            </h2>
+            <p class="mt-12 text-zinc-400 font-semibold tracking-widest uppercase text-xs">— System Automation Mandate</p>
+        </div>
+    </section>
+
+    <section id="sprint" class="max-w-6xl mx-auto px-6 py-32 text-center relative z-10">
+        <div class="mb-20">
+            <span class="text-orange-400 text-[11px] font-mono tracking-[0.2em] uppercase block mb-3">Pipeline Initialization: 48 Hours</span>
+            <h2 class="text-5xl md:text-7xl font-bold mb-6 tracking-tighter text-white">Summer 2026 Engineering Track</h2>
+            <div class="w-20 h-1 bg-blue-500 mx-auto rounded-full"></div>
+            <p class="max-w-2xl mx-auto text-zinc-300 mt-6 text-sm md:text-base">
+                A synchronized, multi-tiered engineering sprint focused on building sandboxed system frameworks and deploying early-stage proof-of-concept (PoC) automation models.
+            </p>
+        </div>
+        
+        <div class="project-display p-8 md:p-12 text-left">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <div class="lg:col-span-5 flex flex-col justify-between space-y-8">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold tracking-tighter leading-none text-white mb-3">Operational Cycle <br><span class="text-sky-400">Tracks</span></h2>
+                        <p class="text-zinc-300 text-xs md:text-sm font-medium leading-relaxed">Select a track execution loop loop to stream metrics live.</p>
+                        <div class="pt-3">
+                            <span class="inline-flex items-center gap-2 text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full font-bold">
+                                <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></span> SYSTEM: RECRUITING ACTIVE
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-1">
+                        <div class="mode-item group cursor-pointer py-4 border-b border-white/10 transition-all mode-active" onclick="updateTrackView('backend', this)">
+                            <span class="text-[9px] text-sky-400 tracking-[0.2em] uppercase font-mono font-bold">TRACK 01 // ARCHITECTURE</span>
+                            <h3 class="text-lg font-bold text-white transition-all duration-300 mt-0.5">Backend Architecture & Routing</h3>
+                        </div>
+
+                        <div class="mode-item group cursor-pointer py-4 border-b border-white/10 transition-all opacity-40" onclick="updateTrackView('embedded', this)">
+                            <span class="text-[9px] text-zinc-300 tracking-[0.2em] uppercase font-mono font-bold">TRACK 02 // FIRMWARE</span>
+                            <h3 class="text-lg font-bold text-white transition-all duration-300 mt-0.5">Embedded Systems & Edge Firmware</h3>
+                        </div>
+
+                        <div class="mode-item group cursor-pointer py-4 transition-all opacity-40" onclick="updateTrackView('integration', this)">
+                            <span class="text-[9px] text-zinc-300 tracking-[0.2em] uppercase font-mono font-bold">TRACK 03 // AUTOMATION</span>
+                            <h3 class="text-lg font-bold text-white transition-all duration-300 mt-0.5">Integration Automation & Client Environment</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-7 flex">
+                    <div class="glassmorphism-data-box w-full rounded-2xl p-8 md:p-10 flex items-center" id="track-description-box">
+                        <div class="space-y-4">
+                            <div class="w-8 h-8 rounded-lg bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 mb-2">
+                                <i class="fas fa-terminal text-sm"></i>
+                            </div>
+                            <p class="text-zinc-100 text-sm md:text-base font-medium leading-relaxed" id="track-dynamic-text">
+                                Focusing on building high-throughput, asynchronous server engines and deterministic data distribution systems. Engineers on this track own the primary network state machines and are responsible for sub-millisecond signal distribution across multiple endpoints.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact" class="mt-48 pt-16 text-left max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="text-[10px] tracking-[0.3em] font-bold font-mono text-sky-400 uppercase">Secure Communication Gateway</div>
+                    <h2 class="text-4xl md:text-5xl font-bold tracking-tighter text-white leading-[1.1]">Initialize <br>System Contact.</h2>
+                    <p class="text-zinc-200 text-sm md:text-base font-medium leading-relaxed">
+                        Establish an interconnected link with our automation architecture desk. We respond securely to verify local physical environment configurations.
+                    </p>
+                    <div class="pt-4">
+                        <a href="mailto:Blossomairtechnologies@gmail.com" class="apple-button text-sm px-8 py-4 gap-3">
+                            <span>Open Channel</span> 
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+                    <div class="contact-glass-card p-6 flex flex-col justify-between min-h-[160px]">
+                        <div class="w-9 h-9 rounded-xl bg-white/5 flex items-center justify-center text-zinc-100">
+                            <i class="far fa-envelope text-sm"></i>
+                        </div>
+                        <div>
+                            <p class="text-zinc-300 text-[10px] font-mono tracking-widest uppercase font-bold">Email Transmissions</p>
+                            <a href="mailto:Blossomairtechnologies@gmail.com" class="text-white font-semibold text-sm hover:text-sky-400 transition break-all mt-1 block">
+                                Blossomairtechnologies@gmail.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-glass-card p-6 flex flex-col justify-between min-h-[160px]">
+                        <div class="w-9 h-9 rounded-xl bg-white/5 flex items-center justify-center text-zinc-100">
+                            <i class="fas fa-map-marker-alt text-sm"></i>
+                        </div>
+                        <div>
+                            <p class="text-zinc-300 text-[10px] font-mono tracking-widest uppercase font-bold">Operations Node</p>
+                            <p class="text-zinc-100 font-semibold text-sm mt-1">Chennai, India</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-glass-card p-6 flex flex-col justify-between min-h-[160px] sm:col-span-2">
+                        <div class="w-9 h-9 rounded-xl bg-white/5 flex items-center justify-center text-orange-400">
+                            <i class="fas fa-shield-alt text-sm"></i>
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                            <div>
+                                <p class="text-zinc-300 text-[10px] font-mono tracking-widest uppercase font-bold">Governance & Identification</p>
+                                <p class="text-zinc-100 font-bold text-sm mt-0.5">Ministry of MSME Registered Entity</p>
+                            </div>
+                            <div class="font-mono text-right sm:border-l sm:border-white/10 sm:pl-6">
+                                <span class="text-[10px] bg-neutral-900 px-3 py-1.5 rounded border border-white/10 text-zinc-200 font-bold block">
+                                    ID: UDYAM-TN-34-0096761
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="w-full py-12 text-center text-zinc-400 text-[10px] uppercase tracking-[0.4em] border-t border-white/10 bg-black font-mono relative z-30">
+        Blossom Air Technologies © 2026 • Built with precision & high-fidelity code
+    </footer>
+
+    <script>
+        // Mobile Navigation Overlay Interface Script Mechanics
+        const menuOverlay = document.getElementById('mobile-menu-overlay');
+        const openBtn = document.getElementById('hamburger-btn');
+        const closeBtn = document.getElementById('close-menu-btn');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            menuOverlay.classList.toggle('menu-open');
+            document.body.classList.toggle('overflow-hidden');
+        }
+
+        openBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+
+        // Scroll Reveal Triggers
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                    entry.target.style.opacity = "1";
+                }
+            });
+        }, { threshold: 0.05 });
+
+        document.querySelectorAll('.bento-card, .project-display').forEach((el) => {
+            el.style.opacity = "0";
+            observer.observe(el);
+        });
+        
+        const trackData = {
+            backend: "Focusing on building high-throughput, asynchronous server engines and deterministic data distribution systems. Engineers on this track own the primary network state machines and are responsible for sub-millisecond signal distribution across multiple endpoints.",
+            embedded: "Focusing on writing highly optimized, low-overhead native logic loops compiled directly for microprocessor hardware nodes. Responsibilities include physical signal isolation, continuous hardware state loops, and ultra-fast network beaconing from the physical switch matrix.",
+            integration: "Focusing on custom mobile runtime configuration, shell script orchestration, and sandboxed terminal automation. This track handles the automated deployment protocols on terminal endpoints, ensuring incoming network signals instantly trigger local hardware notification overlays."
+        };
+
+        function updateTrackView(trackKey, element) {
+            const descriptionText = document.getElementById('track-dynamic-text');
+            const descriptionBox = document.getElementById('track-description-box');
+            
+            descriptionBox.style.opacity = '0';
+            descriptionBox.style.transform = 'scale(0.98) translateY(4px)';
+            descriptionBox.style.transition = 'all 0.2s ease';
+            
+            setTimeout(() => {
+                descriptionText.innerText = trackData[trackKey];
+                descriptionBox.style.opacity = '1';
+                descriptionBox.style.transform = 'scale(1) translateY(0px)';
+            }, 200);
+
+            document.querySelectorAll('.mode-item').forEach(item => {
+                item.classList.remove('mode-active');
+                item.classList.add('opacity-40');
+                const trackingTag = item.querySelector('span');
+                if(trackingTag) trackingTag.className = "text-[9px] text-zinc-300 tracking-[0.2em] uppercase font-mono font-bold";
+            });
+            
+            element.classList.add('mode-active');
+            element.classList.remove('opacity-40');
+            const activeTag = element.querySelector('span');
+            if(activeTag) activeTag.className = "text-[9px] text-sky-400 tracking-[0.2em] uppercase font-mono font-bold";
+        }
+    </script>
+</body>
+</html>
