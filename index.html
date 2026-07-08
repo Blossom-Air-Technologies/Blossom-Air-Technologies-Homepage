@@ -52,10 +52,10 @@
         }
 
         .glass-nav {
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.75);
             backdrop-filter: saturate(180%) blur(20px);
             -webkit-backdrop-filter: saturate(180%) blur(20px);
-            border-bottom: 1px solid var(--glass-border);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .hero-gradient {
@@ -148,6 +148,19 @@
             transform: translateY(-3px);
         }
 
+        .internship-track-card {
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .internship-track-card:hover {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateX(4px);
+        }
+
         .apple-button {
             background: var(--apple-blue);
             color: white;
@@ -179,32 +192,37 @@
 
     <!-- Navbar -->
     <nav class="fixed top-0 w-full z-50 glass-nav">
-        <div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
-            <a href="#" class="flex items-center gap-4 group focus:outline-none" aria-label="Blossom Air Technologies Home">
-                <svg class="w-8 h-8 drop-shadow-[0_2px_8px_rgba(255,255,255,0.1)]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
+            
+            <!-- Logo area -->
+            <a href="#" class="flex items-center gap-3 group focus:outline-none flex-shrink-0" aria-label="Blossom Air Technologies Home">
+                <svg class="w-7 h-7 drop-shadow-[0_2px_8px_rgba(255,255,255,0.1)]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="10" y="10" width="34" height="34" rx="10" fill="#00BCD4"/>
                     <path d="M56 10L90 27L56 44V10Z" fill="#FF6D00"/>
                     <circle cx="27" cy="73" r="17" fill="#00C853"/>
                     <path d="M73 56L90 64.5V81.5L73 90L56 81.5V64.5L73 56Z" fill="#7B61FF"/>
                 </svg>
-                <div class="flex flex-col justify-center select-none">
-                    <span class="text-[12px] sm:text-sm font-bold tracking-[0.2em] uppercase font-sans text-white group-hover:text-zinc-300 transition-colors duration-200 leading-none">
-                        Blossom Air technologies
-                    </span>
-                </div>
+                <span class="text-[11px] sm:text-[12px] font-bold tracking-[0.25em] uppercase font-sans text-white group-hover:text-zinc-300 transition-colors duration-200 whitespace-nowrap">
+                    Blossom Air technologies
+                </span>
             </a>
             
-            <div class="hidden md:flex space-x-10 text-[13px] font-semibold text-zinc-300">
-                <a href="#abstract" class="hover:text-white transition">Abstract</a>
-                <a href="#manifesto" class="hover:text-white transition">Manifesto</a>
-                <a href="#sandbox" class="hover:text-white transition text-amber-500">Active Builds</a>
-                <a href="#pillars" class="hover:text-white transition">Pillars</a>
-                <a href="#departments" class="hover:text-white transition text-sky-400">Core Expertise</a>
+            <!-- Centralized High-Fidelity Nav Links (Unified, crisp aesthetic) -->
+            <div class="hidden lg:flex items-center space-x-8 xl:space-x-10 text-[12px] font-medium tracking-wide text-zinc-400">
+                <a href="#abstract" class="hover:text-white transition duration-200">About</a>
+                <a href="#manifesto" class="hover:text-white transition duration-200">Vision</a>
+                <a href="#sandbox" class="hover:text-white transition duration-200">Projects</a>
+                <a href="#pillars" class="hover:text-white transition duration-200">Core Areas</a>
+                <a href="#departments" class="hover:text-white transition duration-200">Capabilities</a>
+                <a href="#internships" class="hover:text-white transition duration-200">Internships</a>
             </div>
 
-            <div class="flex items-center gap-4">
-                <a href="#contact" class="hidden sm:inline-block text-[11px] uppercase tracking-wider bg-white text-black px-5 py-1.5 rounded-full font-bold hover:bg-gray-200 transition"> Contact Us</a>
-                <button id="hamburger-btn" class="md:hidden text-zinc-100 hover:text-white text-xl p-2 focus:outline-none" aria-label="Toggle Navigation Menu">
+            <!-- Action Area -->
+            <div class="flex items-center gap-4 flex-shrink-0">
+                <a href="#contact" class="hidden lg:inline-block text-[11px] uppercase tracking-wider bg-white text-black px-5 py-2 rounded-full font-bold hover:bg-gray-200 transition duration-200 whitespace-nowrap">
+                    Contact Us
+                </a>
+                <button id="hamburger-btn" class="lg:hidden text-zinc-300 hover:text-white text-xl p-2 focus:outline-none" aria-label="Toggle Navigation Menu">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -217,12 +235,13 @@
             <i class="fas fa-times"></i>
         </button>
         <div class="flex flex-col space-y-8 text-center text-xl font-semibold tracking-wide">
-            <a href="#abstract" class="text-zinc-300 hover:text-white transition mobile-link">Abstract</a>
-            <a href="#manifesto" class="text-zinc-300 hover:text-white transition mobile-link">Manifesto</a>
-            <a href="#sandbox" class="text-amber-500 hover:text-amber-400 transition mobile-link">Active Builds</a>
-            <a href="#pillars" class="text-zinc-300 hover:text-white transition mobile-link">Pillars</a>
-            <a href="#departments" class="text-sky-400 hover:text-sky-300 transition mobile-link">Core Expertise</a>
-            <a href="#contact" class="bg-white text-black text-sm uppercase tracking-wider px-8 py-3 rounded-full font-bold hover:bg-gray-200 transition mobile-link inline-block">Initialize Port</a>
+            <a href="#abstract" class="text-zinc-300 hover:text-white transition mobile-link">About Us</a>
+            <a href="#manifesto" class="text-zinc-300 hover:text-white transition mobile-link">Our Vision</a>
+            <a href="#sandbox" class="text-zinc-300 hover:text-white transition mobile-link">Active Projects</a>
+            <a href="#pillars" class="text-zinc-300 hover:text-white transition mobile-link">Core Areas</a>
+            <a href="#departments" class="text-zinc-300 hover:text-white transition mobile-link">Engineering Capabilities</a>
+            <a href="#internships" class="text-zinc-300 hover:text-white transition mobile-link">Internships</a>
+            <a href="#contact" class="bg-white text-black text-sm uppercase tracking-wider px-8 py-3 rounded-full font-bold hover:bg-gray-200 transition mobile-link inline-block">Contact Us</a>
         </div>
     </div>
 
@@ -237,17 +256,17 @@
 
         <div class="relative z-10 max-w-4xl mx-auto">
             <div class="animate__animated animate__fadeInDown text-sky-400 font-extrabold tracking-[0.35em] uppercase text-[10px] mb-8">
-                BLOSSOM AIR TECHNOLOGIES • Core Ecosystem
+                ESTABLISHED IN 2025
             </div>
             <h1 class="text-5xl md:text-7xl font-bold hero-gradient tracking-tighter mb-8 animate__animated animate__fadeIn leading-[1.1]">
-                Architectural Precision.<br>Distributed Control.
+                Intelligent Software.<br>Autonomous Engineering.
             </h1>
             <p id="abstract" class="max-w-3xl mx-auto text-lg md:text-xl text-zinc-100 font-normal leading-relaxed animate__animated animate__fadeInUp mb-10">
-                We design lightweight, high-integrity communication architectures engineered to process critical events at the absolute edge of the network. By executing directly at the physical boundary, we eliminate network propagation delays, secure local data paths, and guarantee continuous system state validation.
+                We build high-performance software and smart hardware architectures designed to solve real-world challenges. From streamlining custom operations for small businesses to driving pioneering research and development in modern agriculture, we transform complex technology into effortless tools for individuals and enterprises alike.
             </p>
             <div class="animate__animated animate__fadeInUp flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a href="https://github.com/Blossom-Air-Technologies" target="_blank" class="apple-button text-sm px-6 py-3">Explore Framework</a>
-                <a href="#departments" class="bg-zinc-900/90 border border-zinc-700 hover:bg-zinc-800 text-zinc-100 font-medium px-7 py-3 rounded-full transition-all text-sm backdrop-blur-md">View Domains</a>
+                <a href="#departments" class="bg-zinc-900/90 border border-zinc-700 hover:bg-zinc-800 text-zinc-100 font-medium px-7 py-3 rounded-full transition-all text-sm backdrop-blur-md">View Core Domains</a>
             </div>
         </div>
     </section>
@@ -256,36 +275,36 @@
     <section id="manifesto" class="max-w-6xl mx-auto px-6 py-24 relative z-10">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
             <div class="md:col-span-12 bento-card p-12 flex flex-col justify-end min-h-[340px] overflow-hidden">
-                <div class="text-sky-400 text-[10px] uppercase tracking-widest font-bold mb-4">Section 02 // Core Manifesto</div>
-                <h3 class="text-4xl font-bold mb-4 text-white tracking-tight">Radical Efficiency. Built for Autonomy.</h3>
+                <div class="text-sky-400 text-[10px] uppercase tracking-widest font-bold mb-4">Who We Are and Our Vision</div>
+                <h3 class="text-4xl font-bold mb-4 text-white tracking-tight">Complete Systems Integration</h3>
                 <p class="text-zinc-200 text-base md:text-lg leading-relaxed mb-4">
-                    Traditional software engineering models lean heavily on centralized, multi-layered cloud frameworks. This dependency introduces a single point of architectural failure, continuous overhead, and unpredictable latency variables. We believe that true operational reliability requires complete hardware independence.
+                    Blossom Air Technologies was established in 2025 as a multi-disciplinary engineering company. Our approach is inspired by the world's leading technology manufacturers who control both the internal hardware chips and the external software applications to create perfect products. We bring that same level of complete integration to our clients.
                 </p>
                 <p class="text-zinc-200 text-base md:text-lg leading-relaxed">
-                    We design low-overhead, bare-metal logic layers and decentralized backend routing structures that empower localized computing nodes to execute complex commands autonomously with zero third-party dependencies.
+                    We bridge the gap between high-level software development and low-level physical hardware. We focus heavily on building reliable digital solutions for small businesses and individuals, while also running a dedicated research and development division that focuses on changing modern industries like autonomous agriculture.
                 </p>
             </div>
 
             <div id="pillars" class="md:col-span-5 bento-card p-10">
-                <h3 class="text-xl font-bold mb-8 text-orange-400 tracking-tight">Governance & Core Pillars</h3>
+                <h3 class="text-xl font-bold mb-8 text-orange-400 tracking-tight">Ecosystem Strategy</h3>
                 <div class="space-y-6">
                     <div>
-                        <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-2">01 / Decoupled Framework Integrity</h4>
-                        <p class="text-xs text-zinc-200 leading-relaxed">We build compiling routines that execute directly on hardware boundaries, maximizing execution speed and eliminating abstract bottleneck layers.</p>
+                        <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-2">Small Business Architecture</h4>
+                        <p class="text-xs text-zinc-200 leading-relaxed">We develop stable and scalable software tailored to small business operations, removing complex tech dependencies and making tools easy to manage daily.</p>
                     </div>
                     <div class="border-t border-white/10 pt-4">
-                        <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-2">02 / Deterministic Alert Logic</h4>
-                        <p class="text-xs text-zinc-200 leading-relaxed">Localizing data routing, payload encryption, and trigger states to the edge node to preserve communication pathways during network degradation.</p>
+                        <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-2">Agricultural Connectivity</h4>
+                        <p class="text-xs text-zinc-200 leading-relaxed">We focus on building independent hardware systems that perform critical tracking directly on location, keeping operations running smoothly even without internet access.</p>
                     </div>
                 </div>
             </div>
 
             <div class="md:col-span-7 bento-card p-12 flex items-center">
                 <div class="flex-1">
-                    <div class="text-zinc-400 text-[10px] uppercase tracking-widest font-mono mb-2">Architectural Standard</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">The Boundary Philosophy</h3>
+                    <div class="text-zinc-400 text-[10px] uppercase tracking-widest font-mono mb-2">Our Strategy</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">The Connected Infrastructure</h3>
                     <p class="text-zinc-200 leading-relaxed text-sm md:text-base">
-                        If a system requires external internet access or cloud handshakes to make a critical alert decision, it isn't truly autonomous. We build systems that command their own environment.
+                        True innovation requires understanding every layer of a project. We work across four precise engineering areas to make sure your entire digital setup is completely stable, quick, and reliable.
                     </p>
                 </div>
             </div>
@@ -296,8 +315,8 @@
     <section id="sandbox" class="w-full py-12 relative z-10 overflow-hidden">
         <div class="max-w-6xl mx-auto px-6 mb-8 flex justify-between items-end">
             <div>
-                <span class="text-amber-500 text-[11px] font-mono tracking-[0.2em] uppercase block mb-1">Laboratory Production Environment</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight">Active Architecture Builds</h2>
+                <span class="text-amber-500 text-[11px] font-mono tracking-[0.2em] uppercase block mb-1">Production and Innovation</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight">Active Projects</h2>
             </div>
             <div class="flex gap-2">
                 <button onclick="document.getElementById('project-slider').scrollBy({left: -400, behavior: 'smooth'})" class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-white transition"><i class="fas fa-chevron-left text-xs"></i></button>
@@ -306,39 +325,38 @@
         </div>
 
         <div id="project-slider" class="symmetrical-slider-track gap-6">
-            <!-- Project 1: Billing Automation -->
+            <!-- Project 1: Small Business Software -->
             <div class="showcase-card-fluid bento-card p-8 md:p-12 min-h-[460px] bg-gradient-to-br from-zinc-900/90 via-zinc-950/80 to-black border-amber-500/20 relative flex flex-col justify-between overflow-hidden group">
-                <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity pointer-events-none">
-                    <i class="fas fa-calculator text-[180px] text-amber-500"></i>
+                <div class="absolute inset-0 w-full h-full opacity-10 group-hover:opacity-20 transition-opacity pointer-events-none bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80');">
                 </div>
                 <div>
                     <div class="flex justify-between items-center mb-6">
                         <div class="flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 px-3 py-1 rounded-full">
                             <span class="w-1.5 h-1.5 bg-amber-500 rounded-full animate-ping"></span>
-                            <span class="text-amber-500 text-[10px] uppercase font-mono font-bold tracking-wider">Automated Operational Engine</span>
+                            <span class="text-amber-500 text-[10px] uppercase font-mono font-bold tracking-wider">Business Solutions</span>
                         </div>
-                        <span class="text-zinc-500 text-xs font-mono">01 // 02</span>
+                        <span class="text-zinc-500 text-xs font-mono">01 of 02</span>
                     </div>
                     <h3 class="text-2xl md:text-4xl font-black text-white tracking-tighter max-w-2xl leading-tight mb-4">
-                        Billing Automation Framework
+                        Custom Software Development
                     </h3>
                     <p class="text-zinc-300 text-sm leading-relaxed">
-                        An asynchronous, high-throughput calculation pipeline engineered to handle complex usage transactional ledgers with absolute mathematical precision. Designed with localized state processing to systematically eliminate billing discrepancies, reduce database locks, and securely export data logs with near-zero overhead.
+                        Tailored application ecosystems built for small businesses and forward-thinking individuals. We engineer secure, intuitive software architectures that automate daily tasks, eliminate operational friction, and scale fluidly as your business grows.
                     </p>
                 </div>
                 <div class="mt-12 flex flex-col sm:flex-row sm:items-center justify-between gap-6 border-t border-white/10 pt-6">
                     <div class="flex gap-8">
                         <div>
-                            <p class="text-zinc-500 text-[9px] uppercase font-mono tracking-wider">Engine Class</p>
-                            <p class="text-zinc-200 text-sm font-semibold">Transactional Automation</p>
+                            <p class="text-zinc-500 text-[9px] uppercase font-mono tracking-wider">Focus Area</p>
+                            <p class="text-zinc-200 text-sm font-semibold">Business Automation</p>
                         </div>
                         <div>
-                            <p class="text-zinc-500 text-[9px] uppercase font-mono tracking-wider">System State</p>
-                            <p class="text-emerald-400 text-sm font-semibold font-mono">STABLE // DEPLOYED</p>
+                            <p class="text-zinc-500 text-[9px] uppercase font-mono tracking-wider">Status</p>
+                            <p class="text-emerald-400 text-sm font-semibold font-mono">DEPLOYED AND STABLE</p>
                         </div>
                     </div>
                     <a href="#contact" class="bg-white text-black font-bold text-xs px-6 py-3 rounded-full hover:bg-zinc-200 transition-all flex items-center gap-2 self-start sm:self-auto">
-                        <span>Inspect Ledger</span>
+                        <span>Get Started</span>
                         <i class="fas fa-bolt text-[10px]"></i>
                     </a>
                 </div>
@@ -346,36 +364,35 @@
 
             <!-- Project 2: IoT Based Agriculture -->
             <div class="showcase-card-fluid bento-card p-8 md:p-12 min-h-[460px] bg-gradient-to-br from-zinc-900/90 via-zinc-950/80 to-black border-white/10 relative flex flex-col justify-between overflow-hidden group">
-                <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity pointer-events-none">
-                    <i class="fas fa-seedling text-[180px] text-emerald-600"></i>
+                <div class="absolute inset-0 w-full h-full opacity-10 group-hover:opacity-20 transition-opacity pointer-events-none bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80');">
                 </div>
                 <div>
                     <div class="flex justify-between items-center mb-6">
                         <div class="flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/30 px-3 py-1 rounded-full">
-                            <span class="text-emerald-400 text-[10px] uppercase font-mono font-bold tracking-wider">Edge Ecosystem</span>
+                            <span class="text-emerald-400 text-[10px] uppercase font-mono font-bold tracking-wider">Research Division</span>
                         </div>
-                        <span class="text-zinc-500 text-xs font-mono">02 // 02</span>
+                        <span class="text-zinc-500 text-xs font-mono">02 of 02</span>
                     </div>
                     <h3 class="text-2xl md:text-4xl font-black text-white tracking-tighter max-w-2xl leading-tight mb-4">
-                        IoT-Based Agricultural Ecosystem
+                        Smart Agricultural Ecosystems
                     </h3>
                     <p class="text-zinc-300 text-sm leading-relaxed">
-                        A low-power hardware and telemetry mesh framework designed for macro-environmental telemetry extraction. Utilizes isolated, bare-metal node clusters to compute soil thermodynamics, chemical matrices, and micro-climate fluctuations directly at the site edge without relying on persistent cloud connection lanes.
+                        Our dedicated research division develops next-generation tracking systems for modern farming. By implementing local sensor networks and automated monitoring, we help farmers track environmental variables, optimize soil health, and sustainably manage livestock.
                     </p>
                 </div>
                 <div class="mt-12 flex flex-col sm:flex-row sm:items-center justify-between gap-6 border-t border-white/10 pt-6">
                     <div class="flex gap-8">
                         <div>
-                            <p class="text-zinc-500 text-[9px] uppercase font-mono tracking-wider">Hardware Protocol</p>
-                            <p class="text-zinc-200 text-sm font-semibold">Bare-Metal Mesh Telemetry</p>
+                            <p class="text-zinc-500 text-[9px] uppercase font-mono tracking-wider">Focus Area</p>
+                            <p class="text-zinc-200 text-sm font-semibold">Agricultural Innovation</p>
                         </div>
                         <div>
-                            <p class="text-zinc-500 text-[9px] uppercase font-mono tracking-wider">System State</p>
-                            <p class="text-emerald-400 text-sm font-semibold font-mono">ACTIVE // TELEMETRY STABLE</p>
+                            <p class="text-zinc-500 text-[9px] uppercase font-mono tracking-wider">Status</p>
+                            <p class="text-emerald-400 text-sm font-semibold font-mono">ACTIVE FIELD WORK</p>
                         </div>
                     </div>
                     <a href="#contact" class="bg-zinc-800 text-white font-bold text-xs px-6 py-3 rounded-full hover:bg-zinc-700 transition-all flex items-center gap-2 self-start sm:self-auto">
-                        <span>Initialize Link</span>
+                        <span>Learn More</span>
                     </a>
                 </div>
             </div>
@@ -386,19 +403,19 @@
     <section class="py-24 bg-black border-y border-white/5 text-center px-6 relative z-10">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-4xl md:text-6xl font-bold tracking-tighter leading-[1.1] quote-gradient">
-                "If a system relies on external networks to make critical decisions, it isn't truly autonomous."
+                Technology is at its best when it helps sustain our planet and simplifies everyday operations.
             </h2>
-            <p class="mt-12 text-zinc-400 font-semibold tracking-widest uppercase text-xs">— System Automation Mandate</p>
+            <p class="mt-12 text-zinc-400 font-semibold tracking-widest uppercase text-xs">— Engineering Development Mindset</p>
         </div>
     </section>
 
     <!-- Core Engineering Domains -->
     <section id="departments" class="w-full py-24 relative z-10">
         <div class="max-w-6xl mx-auto px-6 mb-16">
-            <span class="text-sky-400 text-[11px] font-mono tracking-[0.2em] uppercase block mb-2">Enterprise Operational Domains</span>
-            <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-white">Core Engineering Capabilities</h2>
+            <span class="text-sky-400 text-[11px] font-mono tracking-[0.2em] uppercase block mb-2">Core Frameworks</span>
+            <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-white">Engineering Capabilities</h2>
             <p class="max-w-xl text-zinc-400 mt-3 text-sm">
-                Our core execution framework areas built with high architectural stability and minimal processing lag.
+                We design and maintain systems across four core tech verticals to ensure complete project stability.
             </p>
         </div>
         
@@ -417,26 +434,26 @@
                                 <i class="fas fa-code text-sm text-[#ff6d00]"></i>
                             </div>
                             <div>
-                                <h4 class="text-white font-bold text-sm tracking-tight">Blossom Air Engine</h4>
-                                <p class="text-zinc-500 text-[10px] font-mono">TRACK // 01</p>
+                                <h4 class="text-white font-bold text-sm tracking-tight">Software Framework</h4>
+                                <p class="text-zinc-500 text-[10px] font-mono">TRACK 01</p>
                             </div>
                         </div>
-                        <span class="text-[10px] px-2.5 py-1 rounded-md font-mono bg-white/5 border border-white/10 text-zinc-300">Asynchronous Logic</span>
+                        <span class="text-[10px] px-2.5 py-1 rounded-md font-mono bg-white/5 border border-white/10 text-zinc-300">Web and Systems</span>
                     </div>
                     <h3 class="text-2xl md:text-3xl font-black text-white tracking-tighter leading-tight mb-4">
                         Software Development
                     </h3>
                     <p class="text-zinc-400 text-sm leading-relaxed">
-                        Engineered to build highly resilient, asynchronous application engines and specialized network routing architectures. We design lightweight infrastructure solutions optimized for absolute reliability, bare-metal speed, and secure cross-platform data delivery vectors.
+                        We build lightweight, fast software suites customized for small business owners and independent operators. By removing unnecessary cloud dependencies, we deliver fast and secure web tools designed to handle everyday transactions and business tasks smoothly.
                     </p>
                 </div>
                 <div class="border-t border-white/10 pt-6 flex justify-between items-center mt-8">
                     <div>
-                        <p class="text-zinc-500 text-[9px] uppercase font-mono tracking-wider">Integrity Matrix</p>
-                        <p class="text-emerald-400 font-mono text-xs font-bold">[ SECURE // VERIFIED ]</p>
+                        <p class="text-zinc-500 text-[9px] uppercase font-mono tracking-wider">System Check</p>
+                        <p class="text-emerald-400 font-mono text-xs font-bold">READY AND VERIFIED</p>
                     </div>
                     <a href="#contact" class="bg-white text-black font-bold text-xs px-5 py-2.5 rounded-full hover:bg-zinc-200 transition-all">
-                        Initialize Track
+                        Get Started
                     </a>
                 </div>
             </div>
@@ -454,26 +471,26 @@
                                 <i class="fas fa-brain text-sm text-[#7b61ff]"></i>
                             </div>
                             <div>
-                                <h4 class="text-white font-bold text-sm tracking-tight">Intelligence Matrix</h4>
-                                <p class="text-zinc-500 text-[10px] font-mono">TRACK // 02</p>
+                                <h4 class="text-white font-bold text-sm tracking-tight">Intelligence Models</h4>
+                                <p class="text-zinc-500 text-[10px] font-mono">TRACK 02</p>
                             </div>
                         </div>
-                        <span class="text-[10px] px-2.5 py-1 rounded-md font-mono bg-white/5 border border-white/10 text-zinc-300">Edge Inference</span>
+                        <span class="text-[10px] px-2.5 py-1 rounded-md font-mono bg-white/5 border border-white/10 text-zinc-300">Local Processing</span>
                     </div>
                     <h3 class="text-2xl md:text-3xl font-black text-white tracking-tighter leading-tight mb-4">
-                        AI-ML & Data Science
+                        AI and Data Science
                     </h3>
                     <p class="text-zinc-400 text-sm leading-relaxed">
-                        Deploying compact, specialized mathematical execution layers directly onto local hardware environments. We construct tailored deep learning inference engines built for streaming pattern identification and real-time edge telemetry optimization.
+                        We design custom machine learning systems that run directly on local devices instead of relying on slow, expensive cloud servers. Our systems process data right where it happens, turning complex information into clear, real-time insights for smarter decision-making.
                     </p>
                 </div>
                 <div class="border-t border-white/10 pt-6 flex justify-between items-center mt-8">
                     <div>
-                        <p class="text-zinc-500 text-[9px] uppercase font-mono tracking-wider">Execution Type</p>
-                        <p class="text-purple-400 font-mono text-xs font-bold">[ LOCAL DETERMINISTIC ]</p>
+                        <p class="text-zinc-500 text-[9px] uppercase font-mono tracking-wider">Model Style</p>
+                        <p class="text-purple-400 font-mono text-xs font-bold">LOCAL INFERENCE</p>
                     </div>
                     <a href="#contact" class="bg-white text-black font-bold text-xs px-5 py-2.5 rounded-full hover:bg-zinc-200 transition-all">
-                        Initialize Track
+                        Get Started
                     </a>
                 </div>
             </div>
@@ -491,25 +508,25 @@
                                 <i class="fas fa-microchip text-sm text-[#00c853]"></i>
                             </div>
                             <div>
-                                <h4 class="text-white font-bold text-sm tracking-tight">Hardware Layer</h4>
-                                <p class="text-zinc-500 text-[10px] font-mono">TRACK // 03</p>
+                                <h4 class="text-white font-bold text-sm tracking-tight">Hardware Integration</h4>
+                                <p class="text-zinc-500 text-[10px] font-mono">TRACK 03</p>
                             </div>
                         </div>
                     </div>
                     <h3 class="text-2xl md:text-3xl font-black text-white tracking-tighter leading-tight mb-4">
-                        Embedded IoT
+                        Embedded Systems
                     </h3>
                     <p class="text-zinc-400 text-sm leading-relaxed">
-                        Writing strict, low-overhead firmware architectures mapped directly onto custom microcontrollers and peripheral circuit components. Our code runs at bare-metal level, ensuring zero garbage-collection interrupts and total processing control.
+                        We write clean, reliable internal software that connects hardware parts directly to digital systems. This ensures that microcontrollers, circuit boards, and communication lines talk to each other instantly with zero lag or tech bottlenecks.
                     </p>
                 </div>
                 <div class="border-t border-white/10 pt-6 flex justify-between items-center mt-8">
                     <div>
-                        <p class="text-zinc-500 text-[9px] uppercase font-mono tracking-wider">Hardware Target</p>
-                        <p class="text-emerald-400 font-mono text-xs font-bold">[ BARE METAL BIND ]</p>
+                        <p class="text-zinc-500 text-[9px] uppercase font-mono tracking-wider">Firmware Layer</p>
+                        <p class="text-emerald-400 font-mono text-xs font-bold">DIRECT HARDWARE BIND</p>
                     </div>
                     <a href="#contact" class="bg-white text-black font-bold text-xs px-5 py-2.5 rounded-full hover:bg-zinc-200 transition-all">
-                        Initialize Track
+                        Get Started
                     </a>
                 </div>
             </div>
@@ -527,8 +544,8 @@
                                 <i class="fas fa-robot text-sm text-[#00bcd4]"></i>
                             </div>
                             <div>
-                                <h4 class="text-white font-bold text-sm tracking-tight">Kinematic Routing</h4>
-                                <p class="text-zinc-500 text-[10px] font-mono">TRACK // 04</p>
+                                <h4 class="text-white font-bold text-sm tracking-tight">Automation Routing</h4>
+                                <p class="text-zinc-500 text-[10px] font-mono">TRACK 04</p>
                             </div>
                         </div>
                     </div>
@@ -536,16 +553,16 @@
                         Robot Operating System
                     </h3>
                     <p class="text-zinc-400 text-sm leading-relaxed">
-                        Constructing complex distributed node networks under ROS paradigms. We integrate precise state-estimation engines, sensor fusion filtering arrays, and hardware-synchronized control links built to handle dynamic operational shifts seamlessly.
+                        Using advanced robotics frameworks, we build connected node networks for autonomous machinery. Our setups combine smart positioning systems and sensor filters to keep physical robotic platforms moving perfectly through changing real-world environments.
                     </p>
                 </div>
                 <div class="border-t border-white/10 pt-6 flex justify-between items-center mt-8">
                     <div>
-                        <p class="text-zinc-500 text-[9px] uppercase font-mono tracking-wider">Node Communications</p>
-                        <p class="text-cyan-400 font-mono text-xs font-bold">[ PUB-SUB DECOUPLED ]</p>
+                        <p class="text-zinc-500 text-[9px] uppercase font-mono tracking-wider">Node System</p>
+                        <p class="text-cyan-400 font-mono text-xs font-bold">CONNECTED NETWORK</p>
                     </div>
                     <a href="#contact" class="bg-white text-black font-bold text-xs px-5 py-2.5 rounded-full hover:bg-zinc-200 transition-all">
-                        Initialize Track
+                        Get Started
                     </a>
                 </div>
             </div>
@@ -553,14 +570,86 @@
         </div>
     </section>
 
+    <!-- Program Section: Engineering Internships Program -->
+    <section id="internships" class="max-w-6xl mx-auto px-6 py-24 relative z-10 border-t border-white/5">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Left Info Panel -->
+            <div class="lg:col-span-5 space-y-6">
+                <span class="text-emerald-400 text-[11px] font-mono tracking-[0.2em] uppercase block">Talent Acceleration</span>
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight">Engineering <br>Fellowships.</h2>
+                <p class="text-zinc-400 text-sm md:text-base leading-relaxed">
+                    We believe in mentoring the next wave of builders. Our intense structural internship cohorts offer young developers, hardware engineers, and research enthusiasts the rare opportunity to work directly on high-performance frameworks and real-world agricultural IoT platforms.
+                </p>
+                <div class="bg-emerald-500/5 border border-emerald-500/20 rounded-2xl p-6 space-y-3">
+                    <p class="text-white text-xs font-bold tracking-wide uppercase font-mono flex items-center gap-2">
+                        <span class="w-2 h-2 bg-emerald-400 rounded-full"></span> Program Metrics
+                    </p>
+                    <p class="text-zinc-300 text-xs leading-relaxed">
+                        Fully remote/hybrid operations, direct source-code contributions, and complete project architecture ownership.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Tracks Panel -->
+            <div class="lg:col-span-7 space-y-4">
+                
+                <div class="internship-track-card p-5 flex items-center justify-between group">
+                    <div class="flex items-center gap-4">
+                        <span class="text-zinc-600 font-mono text-xs">01</span>
+                        <div>
+                            <h4 class="text-white font-bold text-sm">Full-Stack & Systems Architecture</h4>
+                            <p class="text-zinc-500 text-xs">Building scalable, independent business tools</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-arrow-right text-zinc-600 group-hover:text-emerald-400 transition-colors text-xs"></i>
+                </div>
+
+                <div class="internship-track-card p-5 flex items-center justify-between group">
+                    <div class="flex items-center gap-4">
+                        <span class="text-zinc-600 font-mono text-xs">02</span>
+                        <div>
+                            <h4 class="text-white font-bold text-sm">Localized AI & Predictive Modeling</h4>
+                            <p class="text-zinc-500 text-xs">Optimizing edge models for device deployment</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-arrow-right text-zinc-600 group-hover:text-emerald-400 transition-colors text-xs"></i>
+                </div>
+
+                <div class="internship-track-card p-5 flex items-center justify-between group">
+                    <div class="flex items-center gap-4">
+                        <span class="text-zinc-600 font-mono text-xs">03</span>
+                        <div>
+                            <h4 class="text-white font-bold text-sm">Bare-Metal Firmware & IoT Telemetry</h4>
+                            <p class="text-zinc-500 text-xs">Connecting farm sensor meshes with physical hardware</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-arrow-right text-zinc-600 group-hover:text-emerald-400 transition-colors text-xs"></i>
+                </div>
+
+                <div class="internship-track-card p-5 flex items-center justify-between group">
+                    <div class="flex items-center gap-4">
+                        <span class="text-zinc-600 font-mono text-xs">04</span>
+                        <div>
+                            <h4 class="text-white font-bold text-sm">Kinematics & Autonomous Robotics</h4>
+                            <p class="text-zinc-500 text-xs">Developing node navigation rules inside the ROS platform</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-arrow-right text-zinc-600 group-hover:text-emerald-400 transition-colors text-xs"></i>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- Secure Gateway / Contact -->
     <div id="contact" class="mt-24 pt-16 text-left max-w-5xl mx-auto px-6">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             <div class="lg:col-span-5 space-y-6">
-                <div class="text-[10px] tracking-[0.3em] font-bold font-mono text-sky-400 uppercase">Secure Communication Gateway</div>
-                <h2 class="text-4xl md:text-5xl font-bold tracking-tighter text-white leading-[1.1]">Initialize <br>System Contact.</h2>
+                <div class="text-[10px] tracking-[0.3em] font-bold font-mono text-sky-400 uppercase">Communication Gateway</div>
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tighter text-white leading-[1.1]">Bring Your <br>Project to Life.</h2>
                 <p class="text-zinc-200 text-sm md:text-base font-medium leading-relaxed">
-                    Establish an interconnected link with our automation architecture desk. We respond securely to verify local physical environment configurations.
+                    Whether you are a small business looking to completely automate your digital workflow, an individual with a groundbreaking product concept, an organization looking to collaborate on our agricultural research initiatives, or a student seeking a fellowship—we want to build it with you.
                 </p>
                 <div class="pt-4">
                     <a href="https://github.com/Blossom-Air-Technologies" target="_blank" class="apple-button text-sm px-8 py-4 gap-3">
@@ -650,7 +739,7 @@
             });
         }, { threshold: 0.05 });
 
-        document.querySelectorAll('.bento-card, .domain-glass-card').forEach((el) => {
+        document.querySelectorAll('.bento-card, .domain-glass-card, .internship-track-card').forEach((el) => {
             el.style.opacity = "0";
             observer.observe(el);
         });
