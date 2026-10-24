@@ -1,14 +1,15 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blossom Air Technologies | Advanced Systems Engineering</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Blossom Air Technologies | Thoughtful Software Built to Last</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
         
         :root {
             --apple-blue: #0071e3;
@@ -19,7 +20,7 @@
         body {
             background-color: #000;
             color: #f5f5f7;
-            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             overflow-x: hidden;
             scroll-behavior: smooth;
             -webkit-font-smoothing: antialiased;
@@ -50,6 +51,17 @@
         .animated-squiggle-2 {
             animation: floatAndMorph 28s ease-in-out infinite reverse;
         }
+
+        .brand-wordmark {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            line-height: 1;
+            text-transform: none;
+            white-space: nowrap;
+        }
+        @media (max-width: 390px) { .brand-wordmark { font-size: 11px; } }
 
         .glass-nav {
             background: rgba(0, 0, 0, 0.75);
@@ -184,515 +196,364 @@
             opacity: 1;
             pointer-events: auto;
         }
-    </style>
-</head>
-<body class="antialiased">
     
-    <nav class="fixed top-0 w-full z-50 glass-nav">
-        <div class="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
-            
-            <a href="#" class="flex items-center gap-3 group focus:outline-none flex-shrink-0" aria-label="Blossom Air Technologies Home">
-                <svg class="w-7 h-7 drop-shadow-[0_2px_8px_rgba(255,255,255,0.1)]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="10" y="10" width="34" height="34" rx="10" fill="#00BCD4"/>
-                    <path d="M56 10L90 27L56 44V10Z" fill="#FF6D00"/>
-                    <circle cx="27" cy="73" r="17" fill="#00C853"/>
-                    <path d="M73 56L90 64.5V81.5L73 90L56 81.5V64.5L73 56Z" fill="#7B61FF"/>
-                </svg>
-                <span class="text-[11px] sm:text-[12px] font-bold tracking-[0.25em] uppercase font-sans text-white group-hover:text-zinc-300 transition-colors duration-200 whitespace-nowrap">
-                    Blossom Air technologies
+        /* Calm, editorial hero scale: readable on every viewport. */
+        .hero-headline {
+            font-size: clamp(2.35rem, 5.1vw, 4.15rem);
+            line-height: 1.13;
+            letter-spacing: -0.038em;
+            text-wrap: balance;
+        }
+        @media (max-width: 640px) {
+            .hero-headline { font-size: clamp(2.2rem, 9vw, 3.15rem); line-height: 1.16; letter-spacing: -0.035em; }
+        }
+</style>
+<meta content="Blossom Air Technologies builds thoughtful custom software, web applications and practical business solutions designed around your needs." name="description"/><style>html{scroll-behavior:smooth}section[id],div[id="contact"],div[id="pillars"]{scroll-margin-top:88px}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}</style></head>
+<body class="antialiased">
+<nav class="fixed top-0 w-full z-50 glass-nav">
+<div class="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
+<a aria-label="Blossom Air Technologies Home" class="flex items-center gap-3 group focus:outline-none flex-shrink-0" href="#">
+<svg class="w-7 h-7 drop-shadow-[0_2px_8px_rgba(255,255,255,0.1)]" fill="none" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#00BCD4" height="34" rx="10" width="34" x="10" y="10"></rect>
+<path d="M56 10L90 27L56 44V10Z" fill="#FF6D00"></path>
+<circle cx="27" cy="73" fill="#00C853" r="17"></circle>
+<path d="M73 56L90 64.5V81.5L73 90L56 81.5V64.5L73 56Z" fill="#7B61FF"></path>
+</svg>
+<span class="brand-wordmark text-white group-hover:text-zinc-300 transition-colors duration-200">
+                    Blossom Air Technologies
                 </span>
-            </a>
-            
-            <div class="hidden lg:flex items-center space-x-8 xl:space-x-10 text-[12px] font-medium tracking-wide text-zinc-400">
-                <a href="#abstract" class="hover:text-white transition duration-200">About</a>
-                <a href="#manifesto" class="hover:text-white transition duration-200">Vision</a>
-                <a href="#sandbox" class="hover:text-white transition duration-200">Projects</a>
-                <a href="#pillars" class="hover:text-white transition duration-200">Core Areas</a>
-                <a href="#departments" class="hover:text-white transition duration-200">Capabilities</a>
-                <a href="#internships" class="hover:text-white transition duration-200">Internships</a>
-            </div>
-
-            <div class="flex items-center gap-4 flex-shrink-0">
-                <a href="#contact" class="hidden lg:inline-block text-[11px] uppercase tracking-wider bg-white text-black px-5 py-2 rounded-full font-bold hover:bg-gray-200 transition duration-200 whitespace-nowrap">
+</a>
+<div class="hidden lg:flex items-center gap-5 xl:gap-7 text-[12px] font-medium tracking-wide text-zinc-400">
+<a class="hover:text-white transition duration-200 whitespace-nowrap" href="#manifesto">About</a>
+<a class="hover:text-white transition duration-200 whitespace-nowrap" href="#pillars">Our Values</a>
+<a class="hover:text-white transition duration-200 whitespace-nowrap" href="#approach">Our Approach</a>
+<a class="hover:text-white transition duration-200 whitespace-nowrap" href="#departments">Services</a>
+<a class="hover:text-white transition duration-200 whitespace-nowrap" href="#vision">Vision</a>
+<a class="hover:text-white transition duration-200 whitespace-nowrap" href="#internships">Internships</a>
+</div>
+<div class="flex items-center gap-4 flex-shrink-0">
+<a class="hidden lg:inline-block text-[11px] uppercase tracking-wider bg-white text-black px-5 py-2 rounded-full font-bold hover:bg-gray-200 transition duration-200 whitespace-nowrap" href="#contact">
                     Contact Us
                 </a>
-                <button id="hamburger-btn" class="lg:hidden text-zinc-300 hover:text-white text-xl p-2 focus:outline-none" aria-label="Toggle Navigation Menu">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <div id="mobile-menu-overlay" class="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl flex flex-col justify-center items-center">
-        <button id="close-menu-btn" class="absolute top-4 right-6 text-zinc-300 hover:text-white text-2xl p-2" aria-label="Close Menu">
-            <i class="fas fa-times"></i>
-        </button>
-        <div class="flex flex-col space-y-8 text-center text-xl font-semibold tracking-wide">
-            <a href="#abstract" class="text-zinc-300 hover:text-white transition mobile-link">About Us</a>
-            <a href="#manifesto" class="text-zinc-300 hover:text-white transition mobile-link">Our Vision</a>
-            <a href="#sandbox" class="text-zinc-300 hover:text-white transition mobile-link">Active Projects</a>
-            <a href="#pillars" class="text-zinc-300 hover:text-white transition mobile-link">Core Areas</a>
-            <a href="#departments" class="text-zinc-300 hover:text-white transition mobile-link">Engineering Capabilities</a>
-            <a href="#internships" class="text-zinc-300 hover:text-white transition mobile-link">Internships</a>
-            <a href="#contact" class="bg-white text-black text-sm uppercase tracking-wider px-8 py-3 rounded-full font-bold hover:bg-gray-200 transition mobile-link inline-block">Contact Us</a>
-        </div>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="min-h-screen flex flex-col items-center justify-center text-center px-6 relative overflow-hidden">
-        <div class="absolute inset-0 z-0 pointer-events-none flex items-center justify-center">
-            <div class="relative w-full h-full max-w-7xl filter blur-[130px] opacity-45">
-                <div class="animated-squiggle-1 absolute top-[20%] left-[15%] w-[520px] h-[520px] bg-gradient-to-tr from-blue-600 via-indigo-600 to-blue-700 mix-blend-screen"></div>
-                <div class="animated-squiggle-2 absolute bottom-[20%] right-[10%] w-[560px] h-[560px] bg-gradient-to-br from-orange-500 via-amber-500 to-orange-600 mix-blend-screen"></div>
-            </div>
-        </div>
-
-        <div class="relative z-10 max-w-4xl mx-auto">
-            <div class="animate__animated animate__fadeInDown text-sky-400 font-extrabold tracking-[0.35em] uppercase text-[10px] mb-8">
+<button aria-label="Toggle Navigation Menu" class="lg:hidden text-zinc-300 hover:text-white text-xl p-2 focus:outline-none" id="hamburger-btn">
+<i class="fas fa-bars"></i>
+</button>
+</div>
+</div>
+</nav>
+<div class="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl flex flex-col justify-center items-center" id="mobile-menu-overlay">
+<button aria-label="Close Menu" class="absolute top-4 right-6 text-zinc-300 hover:text-white text-2xl p-2" id="close-menu-btn">
+<i class="fas fa-times"></i>
+</button>
+<div class="flex flex-col gap-6 text-center text-lg font-semibold tracking-wide">
+<a class="text-zinc-300 hover:text-white transition mobile-link" href="#manifesto">About</a>
+<a class="text-zinc-300 hover:text-white transition mobile-link" href="#pillars">Our Values</a>
+<a class="text-zinc-300 hover:text-white transition mobile-link" href="#departments">Services</a>
+<a class="text-zinc-300 hover:text-white transition mobile-link" href="#approach">Our Approach</a>
+<a class="text-zinc-300 hover:text-white transition mobile-link" href="#vision">Vision</a>
+<a class="text-zinc-300 hover:text-white transition mobile-link" href="#internships">Internships</a>
+<a class="bg-white text-black text-sm uppercase tracking-wider px-8 py-3 rounded-full font-bold hover:bg-gray-200 transition mobile-link inline-block" href="#contact">Contact Us</a>
+</div>
+</div>
+<!-- Hero Section -->
+<section class="min-h-screen flex flex-col items-center justify-center text-center px-6 relative overflow-hidden">
+<div class="absolute inset-0 z-0 pointer-events-none flex items-center justify-center">
+<div class="relative w-full h-full max-w-7xl filter blur-[130px] opacity-45">
+<div class="animated-squiggle-1 absolute top-[20%] left-[15%] w-[520px] h-[520px] bg-gradient-to-tr from-blue-600 via-indigo-600 to-blue-700 mix-blend-screen"></div>
+<div class="animated-squiggle-2 absolute bottom-[20%] right-[10%] w-[560px] h-[560px] bg-gradient-to-br from-orange-500 via-amber-500 to-orange-600 mix-blend-screen"></div>
+</div>
+</div>
+<div class="relative z-10 max-w-5xl mx-auto">
+<div class="animate__animated animate__fadeInDown text-sky-400 font-extrabold tracking-[0.35em] uppercase text-[10px] mb-8">
                 ESTABLISHED IN 2025
             </div>
-            <h1 class="text-5xl md:text-7xl font-bold hero-gradient tracking-tighter mb-8 animate__animated animate__fadeIn leading-[1.1]">
-                Intelligent Software.<br>Autonomous Engineering.
-            </h1>
-            <p id="abstract" class="max-w-3xl mx-auto text-lg md:text-xl text-zinc-100 font-normal leading-relaxed animate__animated animate__fadeInUp mb-10">
-                We build high-performance software and smart hardware architectures designed to solve real-world challenges. From streamlining custom operations for small businesses to driving pioneering research and development in modern agriculture, we transform complex technology into effortless tools for individuals and enterprises alike.
-            </p>
-            <div class="animate__animated animate__fadeInUp flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="https://github.com/Blossom-Air-Technologies" target="_blank" class="apple-button text-sm px-6 py-3">Explore Framework</a>
-                <a href="#departments" class="bg-zinc-900/90 border border-zinc-700 hover:bg-zinc-800 text-zinc-100 font-medium px-7 py-3 rounded-full transition-all text-sm backdrop-blur-md">View Core Domains</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="manifesto" class="max-w-6xl mx-auto px-6 py-24 relative z-10">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-            <div class="md:col-span-12 bento-card p-12 flex flex-col justify-end min-h-[340px] overflow-hidden">
-                <div class="text-sky-400 text-[10px] uppercase tracking-widest font-bold mb-4">Who We Are and Our Vision</div>
-                <h3 class="text-4xl font-bold mb-4 text-white tracking-tight">Complete Systems Integration</h3>
-                <p class="text-zinc-200 text-base md:text-lg leading-relaxed mb-4">
-                    Blossom Air Technologies was established in 2025 as a multi-disciplinary engineering company. Our approach is inspired by the world's leading technology manufacturers who control both the internal hardware chips and the external software applications to create perfect products. We bring that same level of complete integration to our clients.
-                </p>
-                <p class="text-zinc-200 text-base md:text-lg leading-relaxed">
-                    We bridge the gap between high-level software development and low-level physical hardware. We focus heavily on building reliable digital solutions for small businesses and individuals, while also running a dedicated research and development division that focuses on changing modern industries like autonomous agriculture.
-                </p>
-            </div>
-
-            <div id="pillars" class="md:col-span-5 bento-card p-10">
-                <h3 class="text-xl font-bold mb-8 text-orange-400 tracking-tight">Ecosystem Strategy</h3>
-                <div class="space-y-6">
-                    <div>
-                        <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-2">Small Business Architecture</h4>
-                        <p class="text-xs text-zinc-200 leading-relaxed">We develop stable and scalable software tailored to small business operations, removing complex tech dependencies and making tools easy to manage daily.</p>
-                    </div>
-                    <div class="border-t border-white/10 pt-4">
-                        <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-2">Agricultural Connectivity</h4>
-                        <p class="text-xs text-zinc-200 leading-relaxed">We focus on building independent hardware systems that perform critical tracking directly on location, keeping operations running smoothly even without internet access.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="md:col-span-7 bento-card p-12 flex items-center">
-                <div class="flex-1">
-                    <div class="text-zinc-400 text-[10px] uppercase tracking-widest font-mono mb-2">Our Strategy</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">The Connected Infrastructure</h3>
-                    <p class="text-zinc-200 leading-relaxed text-sm md:text-base">
-                        True innovation requires understanding every layer of a project. We work across four precise engineering areas to make sure your entire digital setup is completely stable, quick, and reliable.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="sandbox" class="w-full py-12 relative z-10 overflow-hidden">
-        <div class="max-w-6xl mx-auto px-6 mb-8 flex justify-between items-end">
-            <div>
-                <span class="text-amber-500 text-[11px] font-mono tracking-[0.2em] uppercase block mb-1">Production and Innovation</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight">Active Projects</h2>
-            </div>
-            <div class="flex gap-2">
-                <button onclick="document.getElementById('project-slider').scrollBy({left: -400, behavior: 'smooth'})" class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-white transition"><i class="fas fa-chevron-left text-xs"></i></button>
-                <button onclick="document.getElementById('project-slider').scrollBy({left: 400, behavior: 'smooth'})" class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-white transition"><i class="fas fa-chevron-right text-xs"></i></button>
-            </div>
-        </div>
-
-        <div id="project-slider" class="symmetrical-slider-track gap-6">
-            <div class="showcase-card-fluid bento-card p-8 md:p-12 min-h-[460px] bg-gradient-to-br from-zinc-900/90 via-zinc-950/80 to-black border-amber-500/20 relative flex flex-col justify-between overflow-hidden group">
-                <div class="absolute inset-0 w-full h-full opacity-10 group-hover:opacity-20 transition-opacity pointer-events-none bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80');">
-                </div>
-                <div>
-                    <div class="flex justify-between items-center mb-6">
-                        <div class="flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 px-3 py-1 rounded-full">
-                            <span class="w-1.5 h-1.5 bg-amber-500 rounded-full animate-ping"></span>
-                            <span class="text-amber-500 text-[10px] uppercase font-mono font-bold tracking-wider">Business Solutions</span>
-                        </div>
-                        <span class="text-zinc-500 text-xs font-mono">01 of 02</span>
-                    </div>
-                    <h3 class="text-2xl md:text-4xl font-black text-white tracking-tighter max-w-2xl leading-tight mb-4">
-                        Custom Software Development
-                    </h3>
-                    <p class="text-zinc-300 text-sm leading-relaxed">
-                        Tailored application ecosystems built for small businesses and forward-thinking individuals. We engineer secure, intuitive software architectures that automate daily tasks, eliminate operational friction, and scale fluidly as your business grows.
-                    </p>
-                </div>
-                <div class="mt-12 flex flex-col sm:flex-row sm:items-center justify-between gap-6 border-t border-white/10 pt-6">
-                    <div class="flex gap-8">
-                        <div>
-                            <p class="text-zinc-500 text-[9px] uppercase font-mono tracking-wider">Focus Area</p>
-                            <p class="text-zinc-200 text-sm font-semibold">Business Automation</p>
-                        </div>
-                        <div>
-                            <p class="text-zinc-500 text-[9px] uppercase font-mono tracking-wider">Status</p>
-                            <p class="text-emerald-400 text-sm font-semibold font-mono">DEPLOYED AND STABLE</p>
-                        </div>
-                    </div>
-                    <a href="#contact" class="bg-white text-black font-bold text-xs px-6 py-3 rounded-full hover:bg-zinc-200 transition-all flex items-center gap-2 self-start sm:self-auto">
-                        <span>Get Started</span>
-                        <i class="fas fa-bolt text-[10px]"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="showcase-card-fluid bento-card p-8 md:p-12 min-h-[460px] bg-gradient-to-br from-zinc-900/90 via-zinc-950/80 to-black border-white/10 relative flex flex-col justify-between overflow-hidden group">
-                <div class="absolute inset-0 w-full h-full opacity-10 group-hover:opacity-20 transition-opacity pointer-events-none bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80');">
-                </div>
-                <div>
-                    <div class="flex justify-between items-center mb-6">
-                        <div class="flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/30 px-3 py-1 rounded-full">
-                            <span class="text-emerald-400 text-[10px] uppercase font-mono font-bold tracking-wider">Research Division</span>
-                        </div>
-                        <span class="text-zinc-500 text-xs font-mono">02 of 02</span>
-                    </div>
-                    <h3 class="text-2xl md:text-4xl font-black text-white tracking-tighter max-w-2xl leading-tight mb-4">
-                        Smart Agricultural Ecosystems
-                    </h3>
-                    <p class="text-zinc-300 text-sm leading-relaxed">
-                        Our dedicated research division develops next-generation tracking systems for modern farming. By implementing local sensor networks and automated monitoring, we help farmers track environmental variables, optimize soil health, and sustainably manage livestock.
-                    </p>
-                </div>
-                <div class="mt-12 flex flex-col sm:flex-row sm:items-center justify-between gap-6 border-t border-white/10 pt-6">
-                    <div class="flex gap-8">
-                        <div>
-                            <p class="text-zinc-500 text-[9px] uppercase font-mono tracking-wider">Focus Area</p>
-                            <p class="text-zinc-200 text-sm font-semibold">Agricultural Innovation</p>
-                        </div>
-                        <div>
-                            <p class="text-zinc-500 text-[9px] uppercase font-mono tracking-wider">Status</p>
-                            <p class="text-emerald-400 text-sm font-semibold font-mono">ACTIVE FIELD WORK</p>
-                        </div>
-                    </div>
-                    <a href="#contact" class="bg-zinc-800 text-white font-bold text-xs px-6 py-3 rounded-full hover:bg-zinc-700 transition-all flex items-center gap-2 self-start sm:self-auto">
-                        <span>Learn More</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 bg-black border-y border-white/5 text-center px-6 relative z-10">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl md:text-6xl font-bold tracking-tighter leading-[1.1] quote-gradient">
+<h1 class="hero-headline font-bold hero-gradient tracking-tight mb-7 animate__animated animate__fadeIn">Technology should work for you.<br class="hidden sm:block"/> Not the other way around.</h1>
+<p class="max-w-2xl mx-auto text-base md:text-lg text-zinc-200 font-normal leading-relaxed animate__animated animate__fadeInUp mb-9" id="abstract">We build thoughtful software that simplifies the way businesses work. Reliable by design. Built around your needs. Ready to grow with you.</p>
+<div class="animate__animated animate__fadeInUp flex flex-col sm:flex-row gap-4 justify-center items-center">
+<a class="apple-button text-sm px-6 py-3" href="#departments">Explore Our Services</a>
+<a class="bg-zinc-900/90 border border-zinc-700 hover:bg-zinc-800 text-zinc-100 font-medium px-7 py-3 rounded-full transition-all text-sm backdrop-blur-md" href="#approach">Our Approach</a>
+</div>
+</div>
+</section>
+<section class="max-w-6xl mx-auto px-6 py-24 relative z-10" id="manifesto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<div class="md:col-span-12 bento-card p-12 flex flex-col justify-end min-h-[340px] overflow-hidden">
+<div class="text-sky-400 text-[10px] uppercase tracking-widest font-bold mb-4">Who We Are and Our Vision</div>
+<h3 class="text-4xl font-bold mb-4 text-white tracking-tight">Technology is powerful. But only when it solves something real.</h3>
+<p class="text-zinc-200 text-base md:text-lg leading-relaxed mb-4">Every business works differently. Yet too often, businesses are expected to change the way they work to fit their software. We believe it should be the other way around.</p>
+<p class="text-zinc-200 text-base md:text-lg leading-relaxed">At Blossom Air Technologies, we begin by understanding people, processes, and problems. Then we create software that feels natural to use, dependable in practice, and practical to maintain. Because building software is about making someone’s work better.</p>
+</div>
+<div class="md:col-span-5 bento-card p-10" id="pillars">
+<h3 class="text-xl font-bold mb-8 text-orange-400 tracking-tight">What We Believe</h3>
+<div class="space-y-6">
+<div>
+<h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-2">People Before Technology</h4>
+<p class="text-xs text-zinc-200 leading-relaxed">We listen before we build. Understanding the people using a product matters as much as understanding the technology behind it.</p>
+</div>
+<div class="border-t border-white/10 pt-4">
+<h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-2">Quality Within Reach</h4>
+<p class="text-xs text-zinc-200 leading-relaxed">Good engineering should be accessible. We aim to deliver lasting value at a fair and transparent cost.</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-7 bento-card p-12 flex items-center">
+<div class="flex-1">
+<div class="text-zinc-400 text-[10px] uppercase tracking-widest font-mono mb-2">Our Strategy</div>
+<h3 class="text-2xl font-bold mb-4 text-white">Built to Last</h3>
+<p class="text-zinc-200 leading-relaxed text-sm md:text-base">We value thoughtful architecture, clear communication, and long-term usefulness over unnecessary complexity. The right solution is the one that continues to serve you.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="max-w-6xl mx-auto px-6 py-24 relative z-10" id="approach"><div class="mb-12"><span class="text-sky-400 text-[11px] font-mono tracking-[0.2em] uppercase block mb-2">Our Approach</span><h2 class="text-4xl md:text-5xl font-bold tracking-tight text-white">Good solutions start with listening.</h2><p class="max-w-2xl text-zinc-400 mt-4 text-base">No unnecessary complexity. Just a thoughtful process built around your goals.</p></div><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><div class="bento-card p-8"><span class="text-sky-400 text-xs font-mono">01 / UNDERSTAND</span><h3 class="text-2xl font-bold mt-4 mb-3">First, we listen.</h3><p class="text-zinc-300 leading-relaxed">We learn how your business works, where the challenges are, and what success means to you.</p></div><div class="bento-card p-8"><span class="text-orange-400 text-xs font-mono">02 / PLAN</span><h3 class="text-2xl font-bold mt-4 mb-3">Then, we simplify.</h3><p class="text-zinc-300 leading-relaxed">We turn your requirements into a clear plan, focusing on what matters most.</p></div><div class="bento-card p-8"><span class="text-emerald-400 text-xs font-mono">03 / BUILD</span><h3 class="text-2xl font-bold mt-4 mb-3">We build with purpose.</h3><p class="text-zinc-300 leading-relaxed">Every feature has a reason. We focus on usability, performance, testing, and reliability.</p></div><div class="bento-card p-8"><span class="text-purple-400 text-xs font-mono">04 / EVOLVE</span><h3 class="text-2xl font-bold mt-4 mb-3">We think beyond launch.</h3><p class="text-zinc-300 leading-relaxed">We plan for maintainability and future needs, with ongoing support agreed for each project.</p></div></div></section>
+<section class="py-24 bg-black border-y border-white/5 text-center px-6 relative z-10">
+<div class="max-w-4xl mx-auto">
+<h2 class="text-4xl md:text-6xl font-bold tracking-tighter leading-[1.1] quote-gradient">
                 "Technology is at its best when it helps sustain our planet and simplifies everyday operations."
             </h2>
-            <p class="mt-12 text-zinc-400 font-semibold tracking-widest uppercase text-xs">— Balaji kolla</p>
-        </div>
-    </section>
-
-    <section id="departments" class="w-full py-24 relative z-10">
-        <div class="max-w-6xl mx-auto px-6 mb-16">
-            <span class="text-sky-400 text-[11px] font-mono tracking-[0.2em] uppercase block mb-2">Core Frameworks</span>
-            <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-white">Engineering Capabilities</h2>
-            <p class="max-w-xl text-zinc-400 mt-3 text-sm">
-                We design and maintain systems across four core tech verticals to ensure complete project stability.
-            </p>
-        </div>
-        
-        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
-            
-            <div class="domain-glass-card p-8 md:p-10 min-h-[380px] flex flex-col justify-between relative overflow-hidden group" 
-                 style="background: linear-gradient(135deg, rgba(255, 109, 0, 0.08) 0%, rgba(22, 22, 23, 0.8) 100%); border: 1px solid rgba(255, 109, 0, 0.2);">
-                <div class="absolute top-0 right-0 p-12 opacity-5 group-hover:opacity-10 transition-opacity pointer-events-none">
-                    <i class="fas fa-code text-[180px] text-[#ff6d00]"></i>
-                </div>
-                <div>
-                    <div class="flex justify-between items-center mb-8">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background: rgba(255, 109, 0, 0.15); border: 1px solid rgba(255, 109, 0, 0.3); ">
-                                <i class="fas fa-code text-sm text-[#ff6d00]"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-white font-bold text-sm tracking-tight">Software Framework</h4>
-                                <p class="text-zinc-500 text-[10px] font-mono">TRACK 01</p>
-                            </div>
-                        </div>
-                        <span class="text-[10px] px-2.5 py-1 rounded-md font-mono bg-white/5 border border-white/10 text-zinc-300">Web and Systems</span>
-                    </div>
-                    <h3 class="text-2xl md:text-3xl font-black text-white tracking-tighter leading-tight mb-4">
-                        Software Development
-                    </h3>
-                    <p class="text-zinc-400 text-sm leading-relaxed">
-                        We build lightweight, fast software suites customized for small business owners and independent operators. By removing unnecessary cloud dependencies, we deliver fast and secure web tools designed to handle everyday transactions and business tasks smoothly.
-                    </p>
-                </div>
-                <div class="border-t border-white/10 pt-6 flex justify-between items-center mt-8">
-                    <div>
-                        <p class="text-zinc-500 text-[9px] uppercase font-mono tracking-wider">System Check</p>
-                        <p class="text-emerald-400 font-mono text-xs font-bold">READY AND VERIFIED</p>
-                    </div>
-                    <a href="#contact" class="bg-white text-black font-bold text-xs px-5 py-2.5 rounded-full hover:bg-zinc-200 transition-all">
-                        Get Started
-                    </a>
-                </div>
-            </div>
-
-            <div class="domain-glass-card p-8 md:p-10 min-h-[380px] flex flex-col justify-between relative overflow-hidden group" 
-                 style="background: linear-gradient(135deg, rgba(123, 97, 255, 0.08) 0%, rgba(22, 22, 23, 0.8) 100%); border: 1px solid rgba(123, 97, 255, 0.25);">
-                <div class="absolute top-0 right-0 p-12 opacity-5 group-hover:opacity-10 transition-opacity pointer-events-none">
-                    <i class="fas fa-brain text-[180px] text-[#7b61ff]"></i>
-                </div>
-                <div>
-                    <div class="flex justify-between items-center mb-8">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background: rgba(123, 97, 255, 0.15); border: 1px solid rgba(123, 97, 255, 0.3);">
-                                <i class="fas fa-brain text-sm text-[#7b61ff]"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-white font-bold text-sm tracking-tight">Intelligence Models</h4>
-                                <p class="text-zinc-500 text-[10px] font-mono">TRACK 02</p>
-                            </div>
-                        </div>
-                        <span class="text-[10px] px-2.5 py-1 rounded-md font-mono bg-white/5 border border-white/10 text-zinc-300">Local Processing</span>
-                    </div>
-                    <h3 class="text-2xl md:text-3xl font-black text-white tracking-tighter leading-tight mb-4">
-                        AI and Data Science
-                    </h3>
-                    <p class="text-zinc-400 text-sm leading-relaxed">
-                        We design custom machine learning systems that run directly on local devices instead of relying on slow, expensive cloud servers. Our systems process data right where it happens, turning complex information into clear, real-time insights for smarter decision-making.
-                    </p>
-                </div>
-                <div class="border-t border-white/10 pt-6 flex justify-between items-center mt-8">
-                    <div>
-                        <p class="text-zinc-500 text-[9px] uppercase font-mono tracking-wider">Model Style</p>
-                        <p class="text-purple-400 font-mono text-xs font-bold">LOCAL INFERENCE</p>
-                    </div>
-                    <a href="#contact" class="bg-white text-black font-bold text-xs px-5 py-2.5 rounded-full hover:bg-zinc-200 transition-all">
-                        Get Started
-                    </a>
-                </div>
-            </div>
-
-            <div class="domain-glass-card p-8 md:p-10 min-h-[380px] flex flex-col justify-between relative overflow-hidden group" 
-                 style="background: linear-gradient(135deg, rgba(0, 200, 83, 0.08) 0%, rgba(22, 22, 23, 0.8) 100%); border: 1px solid rgba(0, 200, 83, 0.25);">
-                <div class="absolute top-0 right-0 p-12 opacity-5 group-hover:opacity-10 transition-opacity pointer-events-none">
-                    <i class="fas fa-microchip text-[180px] text-[#00c853]"></i>
-                </div>
-                <div>
-                    <div class="flex justify-between items-center mb-8">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background: rgba(0, 200, 83, 0.15); border: 1px solid rgba(0, 200, 83, 0.3);">
-                                <i class="fas fa-microchip text-sm text-[#00c853]"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-white font-bold text-sm tracking-tight">Hardware Integration</h4>
-                                <p class="text-zinc-500 text-[10px] font-mono">TRACK 03</p>
-                            </div>
-                        </div>
-                    </div>
-                    <h3 class="text-2xl md:text-3xl font-black text-white tracking-tighter leading-tight mb-4">
-                        Embedded Systems
-                    </h3>
-                    <p class="text-zinc-400 text-sm leading-relaxed">
-                        We write clean, reliable internal software that connects hardware parts directly to digital systems. This ensures that microcontrollers, circuit boards, and communication lines talk to each other instantly with zero lag or tech bottlenecks.
-                    </p>
-                </div>
-                <div class="border-t border-white/10 pt-6 flex justify-between items-center mt-8">
-                    <div>
-                        <p class="text-zinc-500 text-[9px] uppercase font-mono tracking-wider">Firmware Layer</p>
-                        <p class="text-emerald-400 font-mono text-xs font-bold">DIRECT HARDWARE BIND</p>
-                    </div>
-                    <a href="#contact" class="bg-white text-black font-bold text-xs px-5 py-2.5 rounded-full hover:bg-zinc-200 transition-all">
-                        Get Started
-                    </a>
-                </div>
-            </div>
-
-            <div class="domain-glass-card p-8 md:p-10 min-h-[380px] flex flex-col justify-between relative overflow-hidden group" 
-                 style="background: linear-gradient(135deg, rgba(0, 188, 212, 0.08) 0%, rgba(22, 22, 23, 0.8) 100%); border: 1px solid rgba(0, 188, 212, 0.25);">
-                <div class="absolute top-0 right-0 p-12 opacity-5 group-hover:opacity-10 transition-opacity pointer-events-none">
-                    <i class="fas fa-robot text-[180px] text-[#00bcd4]"></i>
-                </div>
-                <div>
-                    <div class="flex justify-between items-center mb-8">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background: rgba(0, 188, 212, 0.15); border: 1px solid rgba(0, 188, 212, 0.3);">
-                                <i class="fas fa-robot text-sm text-[#00bcd4]"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-white font-bold text-sm tracking-tight">Automation Routing</h4>
-                                <p class="text-zinc-500 text-[10px] font-mono">TRACK 04</p>
-                            </div>
-                        </div>
-                    </div>
-                    <h3 class="text-2xl md:text-3xl font-black text-white tracking-tighter leading-tight mb-4">
-                        Robot Operating System
-                    </h3>
-                    <p class="text-zinc-400 text-sm leading-relaxed">
-                        Using advanced robotics frameworks, we build connected node networks for autonomous machinery. Our setups combine smart positioning systems and sensor filters to keep physical robotic platforms moving perfectly through changing real-world environments.
-                    </p>
-                </div>
-                <div class="border-t border-white/10 pt-6 flex justify-between items-center mt-8">
-                    <div>
-                        <p class="text-zinc-500 text-[9px] uppercase font-mono tracking-wider">Node System</p>
-                        <p class="text-cyan-400 font-mono text-xs font-bold">CONNECTED NETWORK</p>
-                    </div>
-                    <a href="#contact" class="bg-white text-black font-bold text-xs px-5 py-2.5 rounded-full hover:bg-zinc-200 transition-all">
-                        Get Started
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="internships" class="max-w-6xl mx-auto px-6 py-24 relative z-10 border-t border-white/5">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
-            <div class="lg:col-span-5 space-y-6">
-                <span class="text-emerald-400 text-[11px] font-mono tracking-[0.2em] uppercase block">Talent Acceleration</span>
-                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight">Engineering <br>Fellowships.</h2>
-                <p class="text-zinc-400 text-sm md:text-base leading-relaxed">
+<p class="mt-12 text-zinc-400 font-semibold tracking-widest uppercase text-xs">— Balaji kolla</p>
+</div>
+</section>
+<section class="w-full py-24 relative z-10" id="departments">
+<div class="max-w-6xl mx-auto px-6 mb-16">
+<span class="text-sky-400 text-[11px] font-mono tracking-[0.2em] uppercase block mb-2">What We Do</span>
+<h2 class="text-4xl md:text-5xl font-bold tracking-tight text-white">Software built around your business.</h2>
+<p class="max-w-xl text-zinc-400 mt-3 text-sm">From a focused application to a complete digital platform, we help make everyday work simpler.</p>
+</div>
+<div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="domain-glass-card p-8 md:p-10 min-h-[380px] flex flex-col justify-between relative overflow-hidden group" style="background: linear-gradient(135deg, rgba(255, 109, 0, 0.08) 0%, rgba(22, 22, 23, 0.8) 100%); border: 1px solid rgba(255, 109, 0, 0.2);">
+<div class="absolute top-0 right-0 p-12 opacity-5 group-hover:opacity-10 transition-opacity pointer-events-none">
+<i class="fas fa-code text-[180px] text-[#ff6d00]"></i>
+</div>
+<div>
+<div class="flex justify-between items-center mb-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full flex items-center justify-center" style="background: rgba(255, 109, 0, 0.15); border: 1px solid rgba(255, 109, 0, 0.3); ">
+<i class="fas fa-code text-sm text-[#ff6d00]"></i>
+</div>
+<div>
+<h4 class="text-white font-bold text-sm tracking-tight">Software Framework</h4>
+<p class="text-zinc-500 text-[10px] font-mono">TRACK 01</p>
+</div>
+</div>
+<span class="text-[10px] px-2.5 py-1 rounded-md font-mono bg-white/5 border border-white/10 text-zinc-300">Web and Systems</span>
+</div>
+<h3 class="text-2xl md:text-3xl font-black text-white tracking-tighter leading-tight mb-4">Custom Software Development</h3>
+<p class="text-zinc-400 text-sm leading-relaxed">Your business is unique. Your software should be too. We create applications designed around your workflows, your customers, and your goals.</p>
+</div>
+<div class="border-t border-white/10 pt-6 flex justify-between items-center mt-8">
+<div>
+<p class="text-zinc-500 text-[9px] uppercase font-mono tracking-wider">System Check</p>
+<p class="text-emerald-400 font-mono text-xs font-bold">BUILT WITH PURPOSE</p>
+</div>
+<a class="bg-white text-black font-bold text-xs px-5 py-2.5 rounded-full hover:bg-zinc-200 transition-all" href="#contact">Discuss a Project</a>
+</div>
+</div>
+<div class="domain-glass-card p-8 md:p-10 min-h-[380px] flex flex-col justify-between relative overflow-hidden group" style="background: linear-gradient(135deg, rgba(123, 97, 255, 0.08) 0%, rgba(22, 22, 23, 0.8) 100%); border: 1px solid rgba(123, 97, 255, 0.25);">
+<div class="absolute top-0 right-0 p-12 opacity-5 group-hover:opacity-10 transition-opacity pointer-events-none">
+<i class="fas fa-brain text-[180px] text-[#7b61ff]"></i>
+</div>
+<div>
+<div class="flex justify-between items-center mb-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full flex items-center justify-center" style="background: rgba(123, 97, 255, 0.15); border: 1px solid rgba(123, 97, 255, 0.3);">
+<i class="fas fa-brain text-sm text-[#7b61ff]"></i>
+</div>
+<div>
+<h4 class="text-white font-bold text-sm tracking-tight">Intelligence Models</h4>
+<p class="text-zinc-500 text-[10px] font-mono">TRACK 02</p>
+</div>
+</div>
+<span class="text-[10px] px-2.5 py-1 rounded-md font-mono bg-white/5 border border-white/10 text-zinc-300">Local Processing</span>
+</div>
+<h3 class="text-2xl md:text-3xl font-black text-white tracking-tighter leading-tight mb-4">Web Applications &amp; Platforms</h3>
+<p class="text-zinc-400 text-sm leading-relaxed">We build responsive websites and web applications that balance ease of use, performance, and maintainability.</p>
+</div>
+<div class="border-t border-white/10 pt-6 flex justify-between items-center mt-8">
+<div>
+<p class="text-zinc-500 text-[9px] uppercase font-mono tracking-wider">Model Style</p>
+<p class="text-purple-400 font-mono text-xs font-bold">BUILT WITH PURPOSE</p>
+</div>
+<a class="bg-white text-black font-bold text-xs px-5 py-2.5 rounded-full hover:bg-zinc-200 transition-all" href="#contact">Discuss a Project</a>
+</div>
+</div>
+<div class="domain-glass-card p-8 md:p-10 min-h-[380px] flex flex-col justify-between relative overflow-hidden group" style="background: linear-gradient(135deg, rgba(0, 200, 83, 0.08) 0%, rgba(22, 22, 23, 0.8) 100%); border: 1px solid rgba(0, 200, 83, 0.25);">
+<div class="absolute top-0 right-0 p-12 opacity-5 group-hover:opacity-10 transition-opacity pointer-events-none">
+<i class="fas fa-microchip text-[180px] text-[#00c853]"></i>
+</div>
+<div>
+<div class="flex justify-between items-center mb-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full flex items-center justify-center" style="background: rgba(0, 200, 83, 0.15); border: 1px solid rgba(0, 200, 83, 0.3);">
+<i class="fas fa-microchip text-sm text-[#00c853]"></i>
+</div>
+<div>
+<h4 class="text-white font-bold text-sm tracking-tight">Hardware Integration</h4>
+<p class="text-zinc-500 text-[10px] font-mono">TRACK 03</p>
+</div>
+</div>
+</div>
+<h3 class="text-2xl md:text-3xl font-black text-white tracking-tighter leading-tight mb-4">Business Process Automation</h3>
+<p class="text-zinc-400 text-sm leading-relaxed">Less repetitive work. More room to focus on what matters. We help simplify everyday tasks through practical software solutions.</p>
+</div>
+<div class="border-t border-white/10 pt-6 flex justify-between items-center mt-8">
+<div>
+<p class="text-zinc-500 text-[9px] uppercase font-mono tracking-wider">Firmware Layer</p>
+<p class="text-emerald-400 font-mono text-xs font-bold">BUILT WITH PURPOSE</p>
+</div>
+<a class="bg-white text-black font-bold text-xs px-5 py-2.5 rounded-full hover:bg-zinc-200 transition-all" href="#contact">Discuss a Project</a>
+</div>
+</div>
+<div class="domain-glass-card p-8 md:p-10 min-h-[380px] flex flex-col justify-between relative overflow-hidden group" style="background: linear-gradient(135deg, rgba(0, 188, 212, 0.08) 0%, rgba(22, 22, 23, 0.8) 100%); border: 1px solid rgba(0, 188, 212, 0.25);">
+<div class="absolute top-0 right-0 p-12 opacity-5 group-hover:opacity-10 transition-opacity pointer-events-none">
+<i class="fas fa-robot text-[180px] text-[#00bcd4]"></i>
+</div>
+<div>
+<div class="flex justify-between items-center mb-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full flex items-center justify-center" style="background: rgba(0, 188, 212, 0.15); border: 1px solid rgba(0, 188, 212, 0.3);">
+<i class="fas fa-robot text-sm text-[#00bcd4]"></i>
+</div>
+<div>
+<h4 class="text-white font-bold text-sm tracking-tight">Automation Routing</h4>
+<p class="text-zinc-500 text-[10px] font-mono">TRACK 04</p>
+</div>
+</div>
+</div>
+<h3 class="text-2xl md:text-3xl font-black text-white tracking-tighter leading-tight mb-4">Integration &amp; Modernization</h3>
+<p class="text-zinc-400 text-sm leading-relaxed">Technology should work together. We help connect tools, improve existing workflows, and plan improvements that support growth.</p>
+</div>
+<div class="border-t border-white/10 pt-6 flex justify-between items-center mt-8">
+<div>
+<p class="text-zinc-500 text-[9px] uppercase font-mono tracking-wider">Node System</p>
+<p class="text-cyan-400 font-mono text-xs font-bold">BUILT WITH PURPOSE</p>
+</div>
+<a class="bg-white text-black font-bold text-xs px-5 py-2.5 rounded-full hover:bg-zinc-200 transition-all" href="#contact">Discuss a Project</a>
+</div>
+</div>
+</div>
+</section>
+<section class="max-w-6xl mx-auto px-6 py-24 relative z-10 border-t border-white/5" id="vision"><div class="mb-10"><span class="text-emerald-400 text-[11px] font-mono tracking-[0.2em] uppercase block mb-2">Our Direction</span><h2 class="text-4xl md:text-5xl font-bold tracking-tight text-white">Build with purpose. Deliver with care.</h2></div><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><div class="bento-card p-10"><span class="text-sky-400 text-xs font-mono">OUR VISION</span><h3 class="text-2xl font-bold mt-5 mb-4">Useful technology, within reach.</h3><p class="text-zinc-300 leading-relaxed">A future where businesses of every size can benefit from thoughtful, reliable software without unnecessary complexity.</p></div><div class="bento-card p-10"><span class="text-orange-400 text-xs font-mono">OUR MISSION</span><h3 class="text-2xl font-bold mt-5 mb-4">Make work better.</h3><p class="text-zinc-300 leading-relaxed">Understand real challenges and turn them into practical software solutions through quality engineering, clear communication, and fair value.</p></div></div></section>
+<section class="max-w-6xl mx-auto px-6 py-24 relative z-10 border-t border-white/5" id="internships">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5 space-y-6">
+<span class="text-emerald-400 text-[11px] font-mono tracking-[0.2em] uppercase block">Talent Acceleration</span>
+<h2 class="text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight">Engineering <br/>Fellowships.</h2>
+<p class="text-zinc-400 text-sm md:text-base leading-relaxed">
                     We believe in mentoring the next wave of builders. Our intense structural internship cohorts offer young developers, hardware engineers, and research enthusiasts the rare opportunity to work directly on high-performance frameworks and real-world agricultural IoT platforms.
                 </p>
-                <div class="bg-emerald-500/5 border border-emerald-500/20 rounded-2xl p-6 space-y-3">
-                    <p class="text-white text-xs font-bold tracking-wide uppercase font-mono flex items-center gap-2">
-                        <span class="w-2 h-2 bg-emerald-400 rounded-full"></span> Program Metrics
+<div class="bg-emerald-500/5 border border-emerald-500/20 rounded-2xl p-6 space-y-3">
+<p class="text-white text-xs font-bold tracking-wide uppercase font-mono flex items-center gap-2">
+<span class="w-2 h-2 bg-emerald-400 rounded-full"></span> Program Metrics
                     </p>
-                    <p class="text-zinc-300 text-xs leading-relaxed">
+<p class="text-zinc-300 text-xs leading-relaxed">
                         Fully remote/hybrid operations, direct source-code contributions, and complete project architecture ownership.
                     </p>
-                </div>
-            </div>
-
-            <div class="lg:col-span-7 space-y-4">
-                
-                <div class="internship-track-card p-5 flex items-center justify-between group">
-                    <div class="flex items-center gap-4">
-                        <span class="text-zinc-600 font-mono text-xs">01</span>
-                        <div>
-                            <h4 class="text-white font-bold text-sm">Full-Stack & Systems Architecture</h4>
-                            <p class="text-zinc-500 text-xs">Building scalable, independent business tools</p>
-                        </div>
-                    </div>
-                    <i class="fas fa-arrow-right text-zinc-600 group-hover:text-emerald-400 transition-colors text-xs"></i>
-                </div>
-
-                <div class="internship-track-card p-5 flex items-center justify-between group">
-                    <div class="flex items-center gap-4">
-                        <span class="text-zinc-600 font-mono text-xs">02</span>
-                        <div>
-                            <h4 class="text-white font-bold text-sm">Localized AI & Predictive Modeling</h4>
-                            <p class="text-zinc-500 text-xs">Optimizing edge models for device deployment</p>
-                        </div>
-                    </div>
-                    <i class="fas fa-arrow-right text-zinc-600 group-hover:text-emerald-400 transition-colors text-xs"></i>
-                </div>
-
-                <div class="internship-track-card p-5 flex items-center justify-between group">
-                    <div class="flex items-center gap-4">
-                        <span class="text-zinc-600 font-mono text-xs">03</span>
-                        <div>
-                            <h4 class="text-white font-bold text-sm">Bare-Metal Firmware & IoT Telemetry</h4>
-                            <p class="text-zinc-500 text-xs">Connecting farm sensor meshes with physical hardware</p>
-                        </div>
-                    </div>
-                    <i class="fas fa-arrow-right text-zinc-600 group-hover:text-emerald-400 transition-colors text-xs"></i>
-                </div>
-
-                <div class="internship-track-card p-5 flex items-center justify-between group">
-                    <div class="flex items-center gap-4">
-                        <span class="text-zinc-600 font-mono text-xs">04</span>
-                        <div>
-                            <h4 class="text-white font-bold text-sm">Kinematics & Autonomous Robotics</h4>
-                            <p class="text-zinc-500 text-xs">Developing node navigation rules inside the ROS platform</p>
-                        </div>
-                    </div>
-                    <i class="fas fa-arrow-right text-zinc-600 group-hover:text-emerald-400 transition-colors text-xs"></i>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <div id="contact" class="mt-24 pt-16 text-left max-w-5xl mx-auto px-6">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            <div class="lg:col-span-5 space-y-6">
-                <div class="text-[10px] tracking-[0.3em] font-bold font-mono text-sky-400 uppercase">Communication Gateway</div>
-                <h2 class="text-4xl md:text-5xl font-bold tracking-tighter text-white leading-[1.1]">Bring Your <br>Project to Life.</h2>
-                <p class="text-zinc-200 text-sm md:text-base font-medium leading-relaxed">
-                    Whether you are a small business looking to completely automate your digital workflow, an individual with a groundbreaking product concept, an organization looking to collaborate on our agricultural research initiatives, or a student seeking a fellowship—we want to build it with you.
-                </p>
-                <div class="pt-4">
-                    <a href="https://github.com/Blossom-Air-Technologies" target="_blank" class="apple-button text-sm px-8 py-4 gap-3">
-                        <span>Open Channel</span> 
-                        <i class="fab fa-github text-sm"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
-                <div class="contact-glass-card p-6 flex flex-col justify-between min-h-[160px]">
-                    <div class="w-9 h-9 rounded-xl bg-white/5 flex items-center justify-center text-zinc-100">
-                        <i class="far fa-envelope text-sm"></i>
-                    </div>
-                    <div>
-                        <p class="text-zinc-300 text-[10px] font-mono tracking-widest uppercase font-bold">Email Transmissions</p>
-                        <a href="mailto:Blossomairtechnologies@gmail.com" class="text-white font-semibold text-sm hover:text-sky-400 transition break-all mt-1 block">
+</div>
+</div>
+<div class="lg:col-span-7 space-y-4">
+<div class="internship-track-card p-5 flex items-center justify-between group">
+<div class="flex items-center gap-4">
+<span class="text-zinc-600 font-mono text-xs">01</span>
+<div>
+<h4 class="text-white font-bold text-sm">Full-Stack &amp; Systems Architecture</h4>
+<p class="text-zinc-500 text-xs">Building scalable, independent business tools</p>
+</div>
+</div>
+<i class="fas fa-arrow-right text-zinc-600 group-hover:text-emerald-400 transition-colors text-xs"></i>
+</div>
+<div class="internship-track-card p-5 flex items-center justify-between group">
+<div class="flex items-center gap-4">
+<span class="text-zinc-600 font-mono text-xs">02</span>
+<div>
+<h4 class="text-white font-bold text-sm">Localized AI &amp; Predictive Modeling</h4>
+<p class="text-zinc-500 text-xs">Optimizing edge models for device deployment</p>
+</div>
+</div>
+<i class="fas fa-arrow-right text-zinc-600 group-hover:text-emerald-400 transition-colors text-xs"></i>
+</div>
+<div class="internship-track-card p-5 flex items-center justify-between group">
+<div class="flex items-center gap-4">
+<span class="text-zinc-600 font-mono text-xs">03</span>
+<div>
+<h4 class="text-white font-bold text-sm">Bare-Metal Firmware &amp; IoT Telemetry</h4>
+<p class="text-zinc-500 text-xs">Connecting farm sensor meshes with physical hardware</p>
+</div>
+</div>
+<i class="fas fa-arrow-right text-zinc-600 group-hover:text-emerald-400 transition-colors text-xs"></i>
+</div>
+<div class="internship-track-card p-5 flex items-center justify-between group">
+<div class="flex items-center gap-4">
+<span class="text-zinc-600 font-mono text-xs">04</span>
+<div>
+<h4 class="text-white font-bold text-sm">Kinematics &amp; Autonomous Robotics</h4>
+<p class="text-zinc-500 text-xs">Developing node navigation rules inside the ROS platform</p>
+</div>
+</div>
+<i class="fas fa-arrow-right text-zinc-600 group-hover:text-emerald-400 transition-colors text-xs"></i>
+</div>
+</div>
+</div>
+</section><div class="mt-24 pt-16 text-left max-w-5xl mx-auto px-6" id="contact">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<div class="lg:col-span-5 space-y-6">
+<div class="text-[10px] tracking-[0.3em] font-bold font-mono text-sky-400 uppercase">LET'S START A CONVERSATION</div>
+<h2 class="text-4xl md:text-5xl font-bold tracking-tighter text-white leading-[1.1]">Have a problem<br/>worth solving?</h2>
+<p class="text-zinc-200 text-sm md:text-base font-medium leading-relaxed">Whether you're starting with an idea or improving something that already exists, tell us what you're trying to achieve. We'll help you explore what's possible.</p>
+<div class="pt-4">
+<a class="apple-button text-sm px-8 py-4 gap-3" href="mailto:Blossomairtechnologies@gmail.com?subject=Project%20Enquiry%20-%20Blossom%20Air%20Technologies" rel="noopener noreferrer" target="_blank">
+<span>Discuss Your Project</span>
+<i class="fas fa-arrow-up-right-from-square text-sm"></i>
+</a>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+<div class="contact-glass-card p-6 flex flex-col justify-between min-h-[160px]">
+<div class="w-9 h-9 rounded-xl bg-white/5 flex items-center justify-center text-zinc-100">
+<i class="far fa-envelope text-sm"></i>
+</div>
+<div>
+<p class="text-zinc-300 text-[10px] font-mono tracking-widest uppercase font-bold">Email Transmissions</p>
+<a class="text-white font-semibold text-sm hover:text-sky-400 transition break-all mt-1 block" href="mailto:Blossomairtechnologies@gmail.com">
                             Blossomairtechnologies@gmail.com
                         </a>
-                    </div>
-                </div>
-
-                <div class="contact-glass-card p-6 flex flex-col justify-between min-h-[160px]">
-                    <div class="w-9 h-9 rounded-xl bg-white/5 flex items-center justify-center text-pink-500">
-                        <i class="fab fa-instagram text-sm"></i>
-                    </div>
-                    <div>
-                        <p class="text-zinc-300 text-[10px] font-mono tracking-widest uppercase font-bold">Social Spectrum</p>
-                        <a href="https://www.instagram.com/blossomairtechnologies/" target="_blank" class="text-white font-semibold text-sm hover:text-sky-400 transition break-all mt-1 block">
+</div>
+</div>
+<div class="contact-glass-card p-6 flex flex-col justify-between min-h-[160px]">
+<div class="w-9 h-9 rounded-xl bg-white/5 flex items-center justify-center text-pink-500">
+<i class="fab fa-instagram text-sm"></i>
+</div>
+<div>
+<p class="text-zinc-300 text-[10px] font-mono tracking-widest uppercase font-bold">Social Spectrum</p>
+<a class="text-white font-semibold text-sm hover:text-sky-400 transition break-all mt-1 block" href="https://www.instagram.com/blossomairtechnologies/" rel="noopener noreferrer" target="_blank">
                             @Blossomairtechnologies
                         </a>
-                    </div>
-                </div>
-
-                <div onclick="window.open('https://www.linkedin.com/company/blossom-air-technologies/', '_blank')" class="contact-glass-card p-6 flex flex-col justify-between min-h-[160px] sm:col-span-2 cursor-pointer transition-all hover:border-blue-500/50 hover:bg-white/5 group">
-                    <div class="flex justify-between items-center w-full">
-                        <div class="w-9 h-9 rounded-xl bg-white/5 flex items-center justify-center text-blue-400 group-hover:bg-blue-500/20 transition-all">
-                            <i class="fab fa-linkedin-in text-sm"></i>
-                        </div>
-                        <span class="text-[9px] font-mono text-zinc-500 tracking-widest group-hover:text-blue-400 transition-colors">LAUNCH CHANNEL <i class="fas fa-external-link-alt ml-1 text-[8px]"></i></span>
-                    </div>
-                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-4">
-                        <div>
-                            <p class="text-zinc-300 text-[10px] font-mono tracking-widest uppercase font-bold">Professional Network</p>
-                            <p class="text-white font-bold text-sm mt-0.5 group-hover:text-blue-400 transition-colors">Blossom Air Technologies on LinkedIn</p>
-                        </div>
-                        <div class="font-mono text-right sm:border-l sm:border-white/10 sm:pl-6">
-                            <span class="text-[10px] bg-neutral-900 px-3 py-1.5 rounded border border-white/10 text-zinc-200 font-bold block">
-                                Corporate Entity
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    
-    <footer class="w-full py-12 text-center text-zinc-400 text-[10px] uppercase tracking-[0.4em] border-t border-white/10 bg-black font-mono relative z-30">
-        Blossom Air Technologies © 2026 • Built with precision & high-fidelity code
+</div>
+</div>
+<div class="contact-glass-card p-6 flex flex-col justify-between min-h-[160px] sm:col-span-2 cursor-pointer transition-all hover:border-blue-500/50 hover:bg-white/5 group" onclick="window.open('https://www.linkedin.com/company/blossom-air-technologies/', '_blank')">
+<div class="flex justify-between items-center w-full">
+<div class="w-9 h-9 rounded-xl bg-white/5 flex items-center justify-center text-blue-400 group-hover:bg-blue-500/20 transition-all">
+<i class="fab fa-linkedin-in text-sm"></i>
+</div>
+<span class="text-[9px] font-mono text-zinc-500 tracking-widest group-hover:text-blue-400 transition-colors">LAUNCH CHANNEL <i class="fas fa-external-link-alt ml-1 text-[8px]"></i></span>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-4">
+<div>
+<p class="text-zinc-300 text-[10px] font-mono tracking-widest uppercase font-bold">Professional Network</p>
+<p class="text-white font-bold text-sm mt-0.5 group-hover:text-blue-400 transition-colors">Blossom Air Technologies on LinkedIn</p>
+</div>
+<div class="font-mono text-right sm:border-l sm:border-white/10 sm:pl-6">
+<span class="text-[10px] bg-neutral-900 px-3 py-1.5 rounded border border-white/10 text-zinc-200 font-bold block">Connect With Us</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="w-full py-12 text-center text-zinc-400 text-[10px] uppercase tracking-[0.4em] border-t border-white/10 bg-black font-mono relative z-30">
+        Blossom Air Technologies © 2026 • Built with precision &amp; high-fidelity code
     </footer>
-
-    
-    <script>
+<script>
         const menuOverlay = document.getElementById('mobile-menu-overlay');
         const openBtn = document.getElementById('hamburger-btn');
         const closeBtn = document.getElementById('close-menu-btn');
